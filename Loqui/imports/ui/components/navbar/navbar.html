@@ -1,3 +1,24 @@
 <template name="navbar">
-	I am the navbar template!	
+	<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="nav pull-right">
+      	<div class="navbar-text">
+      		{{> loginButtons align="right"}}
+      	</div>
+      </div>
+      <button type="button" id="calendarsToggleBtn" class="navbar-btn btn btn-default pull-right">
+        <span class="sr-only">Submit New Event</span>
+        <span class="glyphicon glyphicon-plus"></span>
+      </button>
+      <button type="button" id="calendarsToggleBtn" class="navbar-btn btn btn-default pull-right">
+        <span class="sr-only">Search</span>
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+      <div class="navbar-brand brand">Loqui</div>
+      <button type="button" id="calendarsToggleBtn" class="navbar-btn btn btn-default pull-left">
+        <span class="sr-only">Sidebar</span>
+        <span class="glyphicon glyphicon-th-list"></span>
+      </button>
+    </div>
+	</nav>	
 </template>

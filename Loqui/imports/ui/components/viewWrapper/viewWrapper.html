@@ -1,7 +1,10 @@
 <template name="viewWrapper">
 	<div class="container well">
-		I am the viewWrapper template!
-		{{> calendar}}
-		{{> list}}
+		<button id="viewBtn">Switch views!</button>
+		{{#if toggleDisplay}}
+			{{> calendar}}
+		{{else}}
+			{{> list}}
+		{{/if}}
 	</div>
 </template>

@@ -20,6 +20,122 @@ body{
 
 /*------------sideBar--------------*/
 
+#sideBar{
+	/* CAN BE DELETED: for prototyping only */
 
+	border: 1px solid red;
+
+	/* END CAN BE DELETED*/
+
+	position: fixed;
+	width: 20%;
+	height: 100vh;
+	float: left;
+}
 
 /*--------END sideBar--------------*/
+
+/*------------viewWrapper--------------*/
+
+#viewWrapper{
+	/* CAN BE DELETED: for prototyping only */
+
+	/* END CAN BE DELETED*/
+
+	width: 80%;
+	float: right;
+}
+
+/*--------END viewWrapper--------------*/
+
+/*--------Start media queries----------*/
+
+@media only screen and (max-width: 575px){ /* xtra small */
+	/* CAN BE DELETED: for prototyping only */
+	body{
+		background-color: violet;
+	}
+	/* END CAN BE DELETED*/
+
+	#sideBar{
+		display: none;
+	}
+
+	#viewWrapper{
+		float: none;
+		width: 100%;
+	}
+
+} /* END xtra small */
+
+@media only screen and (min-width: 576px) and (max-width: 767px){ /* small */
+	/* CAN BE DELETED: for prototyping only */
+	body{
+		background-color: red;
+	}
+	/* END CAN BE DELETED*/
+
+	#sideBar{
+		display: none;
+	}
+
+	#viewWrapper{
+		float: none;
+		width: 100%;
+	}
+
+} /* END small */
+
+@media only screen and (min-width: 768px) and (max-width: 991px){ /* medium */
+	/* CAN BE DELETED: for prototyping only */
+	body{
+		background-color: orange;
+	}
+	/* END CAN BE DELETED*/
+
+	#sideBar{
+		width: 20%;
+	}
+
+	#viewWrapper{
+		width: 80%;
+	}
+
+
+} /* END medium */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){ /* large */
+	/* CAN BE DELETED: for prototyping only */
+	body{
+		background-color: yellow;
+	}
+	/* END CAN BE DELETED*/
+
+	#sideBar{
+		width: 17.5%;
+	}
+
+	#viewWrapper{
+		width: 82.5%;
+	}
+
+} /* END large */
+
+@media only screen and (min-width: 1200px){ /* xtra large */
+	/* CAN BE DELETED: for prototyping only */
+	body{
+		background-color: green;
+	}
+	/* END CAN BE DELETED*/
+
+	#sideBar{
+		width: 15%;
+	}
+
+	#viewWrapper{
+		width: 85%;
+	}
+
+} /* END xtra large */
+
+/*--------Start media queries----------*/

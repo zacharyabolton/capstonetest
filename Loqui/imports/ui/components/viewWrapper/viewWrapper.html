@@ -1,6 +1,6 @@
 <template name="viewWrapper">
 	<div class="container well">
-		<button id="viewBtn">Switch views!</button>
+		<button id="viewBtn">{{calOrList}}</button>
 		{{#if toggleDisplay}}
 			{{> calendar}}
 		{{else}}

@@ -8,3 +8,10 @@
 
 	got all the bare bones laid down before implementation of modal/responsive sideBar. This is next.
 	Created new branch named modal_responsive_sideBar for development of this piece.
+	When trying to push terminal threw:
+			fatal: The current branch modal_responsive_sideBar has no upstream branch.
+			To push the current branch and set the remote as upstream, use
+
+	    	git push --set-upstream origin modal_responsive_sideBar
+
+  Done and pushed...

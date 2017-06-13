@@ -20,3 +20,7 @@
   using https://codepen.io/bootpen/pen/jbbaRa?editors=1000 for modal sidebar.
 
   As of now, if you close modal_sideBar at xs or sm viewport sizes and then resize above sm, sidebar "diplay" stays at "none".
+
+06-13-17
+
+	Completely scratched sideBar idea in favor of a suplimentary navbar at top.

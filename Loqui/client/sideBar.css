@@ -1,0 +1,114 @@
+/*//////////sideBar CSS declarations go here////////////*/
+
+/*------------sideBar--------------*/
+
+#sideBar{
+	/* CAN BE DELETED: for prototyping only */
+
+	border: 1px solid red;
+
+	/* END CAN BE DELETED*/
+
+	position: fixed;
+	height: 100vh;
+	float: left;
+	overflow: scroll;
+}
+
+/*--------END sideBar--------------*/
+
+/*--------Start media queries----------*/
+
+@media only screen and (max-width: 575px){ /* xtra small */
+
+	#sideBar{
+		display: none;
+		background-color: white;
+		z-index: 10000;
+		width: 80%;
+	}
+
+	#viewWrapper{
+		float: none;
+		width: 100%;
+	}
+
+} /* END xtra small */
+
+@media only screen and (min-width: 576px) and (max-width: 767px){ /* small */
+
+	#sideBar{
+		display: none;
+		background-color: white;
+		z-index: 10000;
+		width: 60%;
+	}
+
+	#viewWrapper{
+		float: none;
+		width: 100%;
+	}
+
+} /* END small */
+
+@media only screen and (min-width: 768px) and (max-width: 991px){ /* medium */
+
+	#calendarsToggleBtn{
+		display: none;
+	}
+
+	#sideBar{
+		width: 20%;
+	}
+
+	#viewWrapper{
+		width: 80%;
+	}
+
+	#closeModalSideBar{
+		display: none;
+	}
+
+} /* END medium */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){ /* large */
+
+	#calendarsToggleBtn{
+		display: none;
+	}
+
+	#sideBar{
+		width: 17.5%;
+	}
+
+	#viewWrapper{
+		width: 82.5%;
+	}
+
+	#closeModalSideBar{
+		display: none;
+	}
+
+} /* END large */
+
+@media only screen and (min-width: 1200px){ /* xtra large */
+
+	#calendarsToggleBtn{
+		display: none;
+	}
+
+	#sideBar{
+		width: 15%;
+	}
+
+	#viewWrapper{
+		width: 85%;
+	}
+
+	#closeModalSideBar{
+		display: none;
+	}
+
+} /* END xtra large */
+
+/*--------Start media queries----------*/

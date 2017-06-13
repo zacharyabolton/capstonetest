@@ -15,3 +15,8 @@
 	    	git push --set-upstream origin modal_responsive_sideBar
 
   Done and pushed...
+
+  added data-toggle="modal" data-target="#sideBar" to sideBarBtn in navbar.
+  using https://codepen.io/bootpen/pen/jbbaRa?editors=1000 for modal sidebar.
+
+  As of now, if you close modal_sideBar at xs or sm viewport sizes and then resize above sm, sidebar "diplay" stays at "none".

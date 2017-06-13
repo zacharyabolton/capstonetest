@@ -28,7 +28,6 @@ body{
 	/* END CAN BE DELETED*/
 
 	position: fixed;
-	width: 20%;
 	height: 100vh;
 	float: left;
 	overflow: scroll;
@@ -43,7 +42,6 @@ body{
 
 	/* END CAN BE DELETED*/
 
-	width: 80%;
 	float: right;
 }
 
@@ -60,6 +58,9 @@ body{
 
 	#sideBar{
 		display: none;
+		background-color: white;
+		z-index: 10000;
+		width: 80%;
 	}
 
 	#viewWrapper{
@@ -78,6 +79,9 @@ body{
 
 	#sideBar{
 		display: none;
+		background-color: white;
+		z-index: 10000;
+		width: 60%;
 	}
 
 	#viewWrapper{
@@ -106,6 +110,9 @@ body{
 		width: 80%;
 	}
 
+	#closeModalSideBar{
+		display: none;
+	}
 
 } /* END medium */
 
@@ -128,6 +135,10 @@ body{
 		width: 82.5%;
 	}
 
+	#closeModalSideBar{
+		display: none;
+	}
+
 } /* END large */
 
 @media only screen and (min-width: 1200px){ /* xtra large */
@@ -147,6 +158,10 @@ body{
 
 	#viewWrapper{
 		width: 85%;
+	}
+
+	#closeModalSideBar{
+		display: none;
 	}
 
 } /* END xtra large */

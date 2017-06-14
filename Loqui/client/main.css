@@ -37,7 +37,7 @@ body{
 
 .depCalDBselect{
 
-padding-right: 0;
+	padding-right: 0;
 
 }
 
@@ -59,6 +59,11 @@ padding-right: 0;
 
 	/* END CAN BE DELETED*/
 
+}
+
+#viewBtn{
+	width: 100%;
+	margin-bottom: 1.2rem;
 }
 
 /*--------END viewWrapper--------------*/

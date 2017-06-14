@@ -28,3 +28,5 @@ accounts-ui
 twbs:bootstrap
 fullcalendar:fullcalendar
 momentjs:moment
+aldeed:simple-schema
+aldeed:collection2

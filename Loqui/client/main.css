@@ -18,6 +18,25 @@ body{
 
 /*--------END navbar--------------*/
 
+/*------------calendarsNav--------------*/
+
+#calendarsNav{
+
+	overflow: auto;
+	white-space: nowrap;
+
+}
+
+.calDBselect{
+
+	overflow: hidden;
+	margin-bottom: 1.2rem;
+	width: 20%;
+
+}
+
+/*--------END calendarsNav--------------*/
+
 /*------------viewWrapper--------------*/
 
 #viewWrapper{
@@ -46,6 +65,8 @@ body{
 		background-color: red;
 	}
 	/* END CAN BE DELETED*/
+
+
 
 } /* END small */
 

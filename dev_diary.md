@@ -26,3 +26,7 @@
 	Completely scratched sideBar idea in favor of a suplimentary navbar at top.
 	Some trouble with space between elements in calendarsNav buttons.
 	Dont know how to hide scroll bar and keep scrolling, but I don't think it's a problem. I like the way it is now.
+
+06-14-17
+
+	Might need to import Events publication in calendar.js

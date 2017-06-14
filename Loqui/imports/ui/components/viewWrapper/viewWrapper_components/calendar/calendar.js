@@ -4,6 +4,11 @@ import {Events} from '../../../../../api/events/events.js';
 
 import './calendar.html';
 
+let isPast = ( date ) => {
+  let today = moment().format();
+  return moment( today ).isAfter( date );
+};
+
 Template.calendar.onCreated( () => {
   let template = Template.instance();
   template.subscribe( 'events' );

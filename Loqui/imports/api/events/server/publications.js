@@ -3,6 +3,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Events } from '../Events.js';
 
-Meteor.publish('events.all', function () {
+Meteor.publish('events', function () {
   return Events.find();
 });

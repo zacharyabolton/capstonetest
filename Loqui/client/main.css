@@ -35,6 +35,21 @@ body{
 
 }
 
+.depCalDBselect{
+
+padding-right: 0;
+
+}
+
+.closeCal{
+
+	height: 100%;
+	width: 18%;
+	background-color: black;
+	color: white;
+
+}
+
 /*--------END calendarsNav--------------*/
 
 /*------------viewWrapper--------------*/

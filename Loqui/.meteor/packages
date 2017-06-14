@@ -26,3 +26,5 @@ johanbrook:publication-collector  # Test a Meteor publication by collecting its 
 accounts-password
 accounts-ui
 twbs:bootstrap
+fullcalendar:fullcalendar
+momentjs:moment

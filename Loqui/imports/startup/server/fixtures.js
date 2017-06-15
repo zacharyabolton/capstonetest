@@ -4,19 +4,19 @@ import { Meteor } from 'meteor/meteor';
 import { Events } from '../../api/events/events.js';
 
 Meteor.startup(() => {
-  // if the Links collection is empty
+  // if the Events collection is empty
   if (Events.find().count() === 0) {
     const data = [
       { title: 'Event Title', 
-        start: '2016-03-03', 
-        end: '2016-03-03', 
+        start: '2017-06-06', 
+        end: '2017-06-06', 
         editable: true, 
         type: 'Corporate', 
         guests: 50 
       },
       { title: 'Event Title', 
-        start: '2016-03-01', 
-        end: '2016-03-01', 
+        start: '2017-07-07', 
+        end: '2017-07-07', 
         editable: false, 
         type: 'Wedding', 
         guests: 200 

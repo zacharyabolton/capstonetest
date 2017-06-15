@@ -30,3 +30,7 @@
 06-14-17
 
 	Might need to import Events publication in calendar.js
+
+06-15-17
+
+	Having trouble getting fullcalendar to work. Gonna hook up the default "links" database and display in my list template.

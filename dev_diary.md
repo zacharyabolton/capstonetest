@@ -34,3 +34,6 @@
 06-15-17
 
 	Having trouble getting fullcalendar to work. Gonna hook up the default "links" database and display in my list template.
+	Added session package. Added themeteorchef:bert package.
+	Form does not consistently populate when Event is clicked to edit & form maintains data from last insert/update and does not clear after submit.
+	Left comment for TheMeteorChef @ http://chf.bz/2syx891 re:above.

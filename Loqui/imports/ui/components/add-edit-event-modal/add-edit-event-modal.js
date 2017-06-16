@@ -2,6 +2,8 @@ import {Session} from 'meteor/session';
 import {Template} from 'meteor/templating';
 import {Meteor} from 'meteor/meteor';
 
+import {Events} from '../../../api/events/events.js';
+
 import './add-edit-event-modal.html';
 
 let closeModal = () => {
@@ -31,7 +33,10 @@ Template.addEditEventModal.helpers({
   },
   event() {
     let eventModal = Session.get( 'eventModal' );
-
+    //for debugging
+    let test = Events.findOne( eventModal.event );
+    console.log(test);
+    ///////////////
     if ( eventModal ) {
       return eventModal.type === 'edit' ? Events.findOne( eventModal.event ) : {
         start: eventModal.date,

@@ -37,3 +37,9 @@
 	Added session package. Added themeteorchef:bert package.
 	Form does not consistently populate when Event is clicked to edit & form maintains data from last insert/update and does not clear after submit.
 	Left comment for TheMeteorChef @ http://chf.bz/2syx891 re:above.
+
+06-16-17
+
+	Fixed missing import of Events collection in add-edit-event-modal.js.
+	Left new comment for TheMeteorChef @ http://chf.bz/2sBGkcG re:form fields mantaining input data.
+	

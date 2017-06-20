@@ -8,7 +8,10 @@ import './add-edit-event-modal.html';
 
 let closeModal = () => {
 	$( '#add-edit-event-modal' ).modal( 'hide' );
-	/////////////Added myself to clear modal form on second submit
+	$( '.modal-backdrop' ).fadeOut();
+};
+
+let clearModal = () => {
 	$('#add-edit-event-modal').on('hidden.bs.modal', function (e) {
 	$(this)
 		.find("input,textarea")
@@ -18,9 +21,7 @@ let closeModal = () => {
 		//    .prop("checked", "")
 		//    .end();
 	});
-	//////////////End added myself
-	$( '.modal-backdrop' ).fadeOut();
-};
+}
 
 Template.addEditEventModal.helpers({
   modalType( type ) {
@@ -44,10 +45,7 @@ Template.addEditEventModal.helpers({
   },
   event() {
     let eventModal = Session.get( 'eventModal' );
-    //for debugging
-    let test = Events.findOne( eventModal.event );
-    console.log(test);
-    ///////////////
+    console.log(Events.findOne( eventModal.event ));// debugging
     if ( eventModal ) {
       return eventModal.type === 'edit' ? Events.findOne( eventModal.event ) : {
         start: eventModal.date,
@@ -81,8 +79,11 @@ Template.addEditEventModal.events({
       } else {
         Bert.alert( `Event ${ eventModal.type }ed!`, 'success' );
         closeModal();
+        clearModal();// added
       }
     });
+
+    console.log("form submitted");
   },
   'click .delete-event' ( event, template ) {
   	event.preventDefault();

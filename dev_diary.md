@@ -43,3 +43,8 @@
 	Fixed missing import of Events collection in add-edit-event-modal.js.
 	Left new comment for TheMeteorChef @ http://chf.bz/2sBGkcG re:form fields mantaining input data.
 	
+06-20-17
+
+	Initializing. Need to figure out how to clear form after submitting new event. Also should make Bert alert say "Event deleted" after remove rather than "Event edited."
+	Left new comment for TheMeteorChef @ http://chf.bz/2tLgnUB.
+	Partial fix: using jQuery to clear modal form starting at add-edit-event.js 11 but there is still a problem when clicking cancel on an edit event form. If same event is opened to edit immediately afterward then all forms are clear...

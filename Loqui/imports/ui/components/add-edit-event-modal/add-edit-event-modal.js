@@ -7,8 +7,19 @@ import {Events} from '../../../api/events/events.js';
 import './add-edit-event-modal.html';
 
 let closeModal = () => {
-  $( '#add-edit-event-modal' ).modal( 'hide' );
-  $( '.modal-backdrop' ).fadeOut();
+	$( '#add-edit-event-modal' ).modal( 'hide' );
+	/////////////Added myself to clear modal form on second submit
+	$('#add-edit-event-modal').on('hidden.bs.modal', function (e) {
+	$(this)
+		.find("input,textarea")
+			.val('')
+			.end();// can remove ; if below is used
+		// .find("input[type=checkbox], input[type=radio]")
+		//    .prop("checked", "")
+		//    .end();
+	});
+	//////////////End added myself
+	$( '.modal-backdrop' ).fadeOut();
 };
 
 Template.addEditEventModal.helpers({
@@ -74,6 +85,7 @@ Template.addEditEventModal.events({
     });
   },
   'click .delete-event' ( event, template ) {
+  	event.preventDefault();
     let eventModal = Session.get( 'eventModal' );
     if ( confirm( 'Are you sure? This is permanent.' ) ) {
       Meteor.call( 'removeEvent', eventModal.event, ( error ) => {

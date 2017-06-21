@@ -79,7 +79,7 @@ Template.addEditEventModal.events({
       } else {
         Bert.alert( `Event ${ eventModal.type }ed!`, 'success' );
         closeModal();
-        clearModal();// added
+        //clearModal();// added
       }
     });
 
@@ -98,5 +98,10 @@ Template.addEditEventModal.events({
         }
       });
     }
+  },
+  // this fixes the problem of 2nd edit click showing empty form
+  // kinda a hack. I don't like it.
+  'click #cancelForm' (){
+  	window.location.reload();
   }
 });

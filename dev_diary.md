@@ -53,3 +53,9 @@
 
 	Hackily fixed - 2nd edit click displaying blank form - by forcing page reload on cancel form. Don't like it and should look back at it towards the end of dev.
 	For now moving on to designing my database and schema.
+
+06-22-17
+
+	Greatly improved UI IMHO. What i've learned: keep things simple for two reasons. One: it's better UI. Two: why waste time when you might need to scrap it later.
+
+	I have hooked up the list template to the events db. Next I need to find a way to select by department...

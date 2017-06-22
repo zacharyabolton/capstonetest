@@ -31,8 +31,7 @@ let EventsSchema = new SimpleSchema({
   },
   'department': {
     type: String,
-    label: 'Department',
-    allowedValues: [ 'Art History', 'Chemistry', 'Social Science', 'Journalism' ]
+    label: 'Department'
   },
   // 'guests': {
   //   type: Number,

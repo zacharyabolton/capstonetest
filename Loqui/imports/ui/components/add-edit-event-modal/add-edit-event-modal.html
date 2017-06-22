@@ -10,7 +10,7 @@
         <div class="modal-body">
           <div class="form-group">
             <div class="row">
-              <div class="col-xs-12 col-sm-4">
+              <!-- <div class="col-xs-12 col-sm-4">
                 <label for="department">Department</label>
                 <select name="department" class="form-control">
                   <option selected="{{selected event.type 'Art History' }}" value="Art History">Art History</option>
@@ -18,6 +18,10 @@
                   <option selected="{{selected event.type 'Social Science' }}" value="Social Science">Social Science</option>
                   <option selected="{{selected event.type 'Journalism' }}" value="Journalism">Journalism</option>
                 </select>
+              </div> -->
+              <div class="form-group col-xs-12 col-sm-4">
+                <label for="department">Department</label>
+                <input type="text" name="department" class="form-control" value="{{event.department}}">
               </div>
               <div class="col-xs-12 col-sm-3">
                 <label for="start">Event Starts</label>

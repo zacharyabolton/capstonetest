@@ -45,7 +45,6 @@ Template.addEditEventModal.helpers({
   },
   event() {
     let eventModal = Session.get( 'eventModal' );
-    console.log(Events.findOne( eventModal.event ));// debugging
     if ( eventModal ) {
       return eventModal.type === 'edit' ? Events.findOne( eventModal.event ) : {
         start: eventModal.date,
@@ -65,7 +64,7 @@ Template.addEditEventModal.events({
           title: template.find( '[name="title"]' ).value,
           start: template.find( '[name="start"]' ).value,
           end: template.find( '[name="end"]' ).value,
-          department: template.find( '[name="department"] option:selected' ).value,
+          department: template.find( '[name="department"]' ).value,
           //guests: parseInt( template.find( '[name="guests"]' ).value, 10 )
         };
 
@@ -82,8 +81,6 @@ Template.addEditEventModal.events({
         //clearModal();// added
       }
     });
-
-    console.log("form submitted");
   },
   'click .delete-event' ( event, template ) {
   	event.preventDefault();

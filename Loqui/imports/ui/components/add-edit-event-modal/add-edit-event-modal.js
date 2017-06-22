@@ -65,8 +65,8 @@ Template.addEditEventModal.events({
           title: template.find( '[name="title"]' ).value,
           start: template.find( '[name="start"]' ).value,
           end: template.find( '[name="end"]' ).value,
-          type: template.find( '[name="type"] option:selected' ).value,
-          guests: parseInt( template.find( '[name="guests"]' ).value, 10 )
+          department: template.find( '[name="department"] option:selected' ).value,
+          //guests: parseInt( template.find( '[name="guests"]' ).value, 10 )
         };
 
     if ( submitType === 'editEvent' ) {

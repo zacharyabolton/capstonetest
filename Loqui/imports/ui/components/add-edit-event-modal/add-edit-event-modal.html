@@ -11,12 +11,12 @@
           <div class="form-group">
             <div class="row">
               <div class="col-xs-12 col-sm-4">
-                <label for="type">Event Type</label>
-                <select name="type" class="form-control">
-                  <option selected="{{selected event.type 'Birthday' }}" value="Birthday">Birthday</option>
-                  <option selected="{{selected event.type 'Corporate' }}" value="Corporate">Corporate</option>
-                  <option selected="{{selected event.type 'Miscellaneous' }}" value="Miscellaneous">Miscellaneous</option>
-                  <option selected="{{selected event.type 'Wedding' }}" value="Wedding">Wedding</option>
+                <label for="department">Department</label>
+                <select name="department" class="form-control">
+                  <option selected="{{selected event.type 'Art History' }}" value="Art History">Art History</option>
+                  <option selected="{{selected event.type 'Chemistry' }}" value="Chemistry">Chemistry</option>
+                  <option selected="{{selected event.type 'Social Science' }}" value="Social Science">Social Science</option>
+                  <option selected="{{selected event.type 'Journalism' }}" value="Journalism">Journalism</option>
                 </select>
               </div>
               <div class="col-xs-12 col-sm-3">
@@ -33,12 +33,12 @@
             <label for="title">Event Title</label>
             <input type="text" name="title" class="form-control" value="{{event.title}}">
           </div>
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-xs-12 col-sm-4">
               <label for="guests">Number of Guests</label>
               <input type="text" name="guests" class="form-control" value="{{event.guests}}">
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="modal-footer">
           {{#if modalType 'edit'}}

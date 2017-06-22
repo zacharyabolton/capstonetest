@@ -19,7 +19,7 @@ Events.deny({
 let EventsSchema = new SimpleSchema({
   'title': {
     type: String,
-    label: 'The title of this event.'
+    label: 'The title of this congress.'
   },
   'start': {
     type: String,
@@ -29,15 +29,15 @@ let EventsSchema = new SimpleSchema({
     type: String,
     label: 'When this event will end.'
   },
-  'type': {
+  'department': {
     type: String,
-    label: 'What type of event is this?',
-    allowedValues: [ 'Birthday', 'Corporate', 'Wedding', 'Miscellaneous' ]
+    label: 'Department',
+    allowedValues: [ 'Art History', 'Chemistry', 'Social Science', 'Journalism' ]
   },
-  'guests': {
-    type: Number,
-    label: 'The number of guests expected at this event.'
-  }
+  // 'guests': {
+  //   type: Number,
+  //   label: 'The number of guests expected at this event.'
+  // }
 });
 
 Events.attachSchema( EventsSchema );

@@ -11,8 +11,8 @@ Meteor.methods({
       title: Match.Optional( String ),
       start: String,
       end: String,
-      type: Match.Optional( String ),
-      guests: Match.Optional( Number )
+      department: Match.Optional( String ),
+      // guests: Match.Optional( Number )
     });
 
     try {

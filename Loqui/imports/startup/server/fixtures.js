@@ -11,15 +11,13 @@ Meteor.startup(() => {
         start: '2017-06-06', 
         end: '2017-06-06', 
         editable: true, 
-        type: 'Corporate', 
-        guests: 50 
+        department: 'Art History'
       },
       { title: 'Event Title', 
         start: '2017-07-07', 
         end: '2017-07-07', 
         editable: false, 
-        type: 'Wedding', 
-        guests: 200 
+        department: 'Chemistry'
       }
     ];
 

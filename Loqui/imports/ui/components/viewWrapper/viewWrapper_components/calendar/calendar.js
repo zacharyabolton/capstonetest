@@ -35,8 +35,8 @@ Template.calendar.onRendered( () => {
     eventRender( event, element ) {
       element.find( '.fc-content' ).html(
         `<h4>${ event.title }</h4>
-         <p class="guest-count">${ event.guests } Guests</p>
-         <p class="type-${ event.type }">#${ event.type }</p>
+         <!-- <p class="guest-count">${ event.guests } Guests</p> -->
+         <p class="type-${ event.department }">#${ event.department }</p>
         `
       );
     },eventDrop( event, delta, revert ) {

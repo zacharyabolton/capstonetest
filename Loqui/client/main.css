@@ -20,33 +20,17 @@ body{
 
 /*------------calendarsNav--------------*/
 
-#calendarsNav{
+/*#calendarsNav{
 
 	overflow: auto;
 	white-space: nowrap;
 
-}
+}*/
 
 .calDBselect{
 
 	overflow: hidden;
 	margin-bottom: 1.2rem;
-	width: 20%;
-
-}
-
-.depCalDBselect{
-
-	padding-right: 0;
-
-}
-
-.closeCal{
-
-	height: 100%;
-	width: 18%;
-	background-color: black;
-	color: white;
 
 }
 

@@ -7,7 +7,7 @@
 			    <span class="caret"></span>
 			  </button>
 			  <ul id="dropdown-menu" class="dropdown-menu col-xs-12" aria-labelledby="dropdownMenu1">
-			  	<li class="departmentDropDownItem">All</li>
+			  	<li id="allDeps">All</li>
 			  	{{#each distinctDepartments}}
 			    	<li class="departmentDropDownItem">{{this}}<!--  <span class="pull-right">({{departmentCount}})</span> --></li>
 			    {{/each}}

@@ -40,12 +40,6 @@ html{
 
 }
 
-.calDBselect ul li:hover{
-	background-color: white;
-	cursor: pointer;
-
-}
-
 #dropdown-menu{
 	margin-top: 0rem;
 	border-radius: 0rem;
@@ -54,7 +48,7 @@ html{
 	width: 200%;
 }
 
-.departmentDropDownItem{
+.departmentDropDownItem, #allDeps{
 	background-color: #cfcfcf;
 	font-weight: bold;
 	padding-left: 1rem;
@@ -62,6 +56,15 @@ html{
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
 	border-top: 1px solid grey;
+}
+
+.calDBselect ul li:hover{
+	background-color: white;
+	cursor: pointer;
+}
+
+#allDeps:hover{
+	background-color: white;
 }
 
 .departmentDropDownItem span{

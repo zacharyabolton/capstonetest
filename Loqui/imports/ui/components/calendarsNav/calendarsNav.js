@@ -7,6 +7,8 @@ import {Events} from '../../../api/events/events.js';
 
 import './calendarsNav.html';
 
+export var depFilter = {};
+
 Template.calendarsNav.onCreated( () => {
   let template = Template.instance();
   template.subscribe( 'events' );
@@ -25,10 +27,21 @@ Template.calendarsNav.helpers({
 
 Template.calendarsNav.events({
 	'click .departmentDropDownItem'(){
-		var depFilter = Events.find({}, {"department": this});
+		var thisToString = this.toString();
+		depFilter = {department: thisToString};
 
-		var test = depFilter.title;
+		// var depFilter = Events.find({department: thisToString}).fetch().map(function(x){
+		// 	return x;
+		// });
 
-		console.log(test);
+		// console.log(depFilter);
+		console.log(depFilter);
+	},
+	'click #allDeps'(){
+		depFilter = {};
+
+		console.log(depFilter);
 	}
-})
+});
+
+console.log(depFilter);

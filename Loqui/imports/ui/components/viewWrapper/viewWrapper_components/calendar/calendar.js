@@ -5,6 +5,8 @@ import {Session} from 'meteor/session';
 
 import {Events} from '../../../../../api/events/events.js';
 
+import {depFilter} from '../../../calendarsNav/calendarsNav.js';
+
 import './calendar.html';
 
 let isPast = ( date ) => {
@@ -20,7 +22,7 @@ Template.calendar.onCreated( () => {
 Template.calendar.onRendered( () => {
   $( '#events-calendar' ).fullCalendar({
     events( start, end, timezone, callback ) {
-      let data = Events.find().fetch().map( ( event ) => {
+      let data = Events.find(depFilter).fetch().map( ( event ) => {
         event.editable = !isPast( event.start );
         return event;
       });
@@ -73,3 +75,4 @@ Template.calendar.onRendered( () => {
     $( '#events-calendar' ).fullCalendar( 'refetchEvents' );
   });
 });
+

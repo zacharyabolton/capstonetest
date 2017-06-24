@@ -24,12 +24,49 @@ html{
 }*/
 
 .calDBselect{
-
-	overflow: hidden;
 	margin-bottom: 1.2rem;
+	margin-left: 0rem;
+	padding-left: 0rem;
+	margin-right: 0rem;
+	padding-right: 0rem;
+	border: none;
+	border-radius: 0rem;
 
 }
 
+.calDBselect button{
+	border: none;
+	border-radius: 0rem;
+
+}
+
+.calDBselect ul li:hover{
+	background-color: white;
+	cursor: pointer;
+
+}
+
+#dropdown-menu{
+	margin-top: 0rem;
+	border-radius: 0rem;
+	padding: 0rem;
+	border: none;
+	width: 200%;
+}
+
+.departmentDropDownItem{
+	background-color: #cfcfcf;
+	font-weight: bold;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+	border-top: 1px solid grey;
+}
+
+.departmentDropDownItem span{
+	color: grey;
+}
 /*--------END calendarsNav--------------*/
 
 /*------------viewWrapper--------------*/

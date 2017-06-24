@@ -1,6 +1,23 @@
 <template name="calendarsNav">
 		<div id="calendarsNav" class="container">
-			<button class="calDBselect col-xs-6"><span class="glyphicon glyphicon-calendar"></span> All</button>
-			<button class="calDBselect col-xs-6"><span class="glyphicon glyphicon-ok"></span> Marked</button>
+			<!-- <button class="calDBselect col-xs-6"><span class="glyphicon glyphicon-calendar"></span> All</button> -->
+			<div class="dropdown calDBselect col-xs-6">
+			  <button class="btn btn-default dropdown-toggle col-xs-12" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			    <span class="glyphicon glyphicon-calendar"></span> All
+			    <span class="caret"></span>
+			  </button>
+			  <ul id="dropdown-menu" class="dropdown-menu col-xs-12" aria-labelledby="dropdownMenu1">
+			  	<li class="departmentDropDownItem">All</li>
+			  	{{#each distinctDepartments}}
+			    	<li class="departmentDropDownItem">{{this}}<!--  <span class="pull-right">({{departmentCount}})</span> --></li>
+			    {{/each}}
+			  </ul>
+			</div>
+			<!-- <button class="calDBselect col-xs-6"><span class="glyphicon glyphicon-ok"></span> Interested</button> -->
+			<div class="calDBselect col-xs-6">
+			  <button class="btn btn-default col-xs-12" type="button" id="interested">
+			    <span class="glyphicon glyphicon-ok"></span> Interested
+			  </button>
+			</div>
 		</div>
 </template>

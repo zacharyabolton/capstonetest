@@ -2,7 +2,6 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Tracker } from 'meteor/tracker';
 import { Session } from 'meteor/session';
-import { ReactiveDict } from 'meteor/reactive-dict';
 
 import { Events } from '../../../../../api/events/events.js';
 
@@ -16,8 +15,6 @@ let isPast = ( date ) => {
 Template.calendar.onCreated( () => {
   let template = Template.instance();
   template.subscribe( 'events' );
-
-  this.state = new ReactiveDict();
 });
 
 Template.calendar.onRendered( () => {

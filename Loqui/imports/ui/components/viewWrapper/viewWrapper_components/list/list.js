@@ -19,34 +19,9 @@ Template.list.onCreated( () => {
 
 Template.list.helpers({
 	events() {
-    return Events.find({});
+
+    var selectedDep = Session.get('selectedDep');
+
+    return Events.find(selectedDep);
   },
-  // events( start, end, timezone, callback ) {
-  //   let data = Events.find().fetch().map( ( event ) => {
-  //     event.editable = !isPast( event.start );
-  //     return event;
-  //   });
-
-  //   //Here, we're saying once our data is available, 
-  //   //go ahead and "update" the calendar. 
-  //   if ( data ) {
-  //     callback( data );
-  //   }
-  // },
-  // //update our initialization of FullCalendar to customize event styles
-
-  // // dayClick( date ) {
-  // //   Session.set( 'eventModal', { type: 'add', date: date.format() } );
-  // //   $( '#add-edit-event-modal' ).modal( 'show' );
-  // // },
-  // eventClick( event ) {
-  //   Session.set( 'eventModal', { type: 'edit', event: event._id } );
-  //   $( '#add-edit-event-modal' ).modal( 'show' );
-  // }
-
-  // //to ensure that our calendar data always updates
-  // // Tracker.autorun( () => {
-  // //   Events.find().fetch();
-  // //   $( '#events-calendar' ).fullCalendar( 'refetchEvents' );
-  // // });
 });

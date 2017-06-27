@@ -19,9 +19,12 @@ Template.list.onCreated( () => {
 
 Template.list.helpers({
 	events() {
-
     var selectedDep = Session.get('selectedDep');
-
     return Events.find(selectedDep);
   },
+  month() {
+    let date = this.start;
+    console.log(date);
+    return date;
+  }
 });

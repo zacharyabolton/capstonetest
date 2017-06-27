@@ -13,6 +13,7 @@ Template.calendarsNav.onCreated( () => {
   let template = Template.instance();
   template.subscribe( 'events' );
   Session.set('selectedDep', depFilter);
+  Session.set('depBtnLabel', 'All Departments');
 });
 
 Template.calendarsNav.helpers({
@@ -24,6 +25,9 @@ Template.calendarsNav.helpers({
 		}), true);
 		return distinctDepartments;
   },
+  depBtnLabel(){
+  	return Session.get("depBtnLabel");
+  }
 });
 
 Template.calendarsNav.events({
@@ -31,9 +35,11 @@ Template.calendarsNav.events({
 		var thisToString = this.toString();
 		var depFilter = {department: thisToString};
     Session.set('selectedDep', depFilter);
+    Session.set('depBtnLabel', thisToString);
 	},
 	'click #allDeps'(){
 		var depFilter = {};
     Session.set('selectedDep', depFilter);
+    Session.set('depBtnLabel', 'All Departments');
 	}
 });

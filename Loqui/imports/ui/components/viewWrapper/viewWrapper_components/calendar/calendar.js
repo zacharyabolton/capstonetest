@@ -1,11 +1,10 @@
-import {Meteor} from 'meteor/meteor';
-import {Template} from 'meteor/templating';
-import {Tracker} from 'meteor/tracker';
-import {Session} from 'meteor/session';
+import { Meteor } from 'meteor/meteor';
+import { Template } from 'meteor/templating';
+import { Tracker } from 'meteor/tracker';
+import { Session } from 'meteor/session';
+import { ReactiveDict } from 'meteor/reactive-dict';
 
-import {Events} from '../../../../../api/events/events.js';
-
-import {depFilter} from '../../../calendarsNav/calendarsNav.js';
+import { Events } from '../../../../../api/events/events.js';
 
 import './calendar.html';
 
@@ -17,12 +16,16 @@ let isPast = ( date ) => {
 Template.calendar.onCreated( () => {
   let template = Template.instance();
   template.subscribe( 'events' );
+
+  this.state = new ReactiveDict();
 });
 
 Template.calendar.onRendered( () => {
   $( '#events-calendar' ).fullCalendar({
     events( start, end, timezone, callback ) {
-      let data = Events.find(depFilter).fetch().map( ( event ) => {
+      var selectedDep = Session.get('selectedDep');
+
+      let data = Events.find(selectedDep).fetch().map( ( event ) => {
         event.editable = !isPast( event.start );
         return event;
       });
@@ -75,4 +78,3 @@ Template.calendar.onRendered( () => {
     $( '#events-calendar' ).fullCalendar( 'refetchEvents' );
   });
 });
-

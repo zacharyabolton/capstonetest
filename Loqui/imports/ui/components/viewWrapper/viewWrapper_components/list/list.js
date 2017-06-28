@@ -31,7 +31,10 @@ let findMonths = function(){
     sort: {start: 1}, fields: {start: true}
   }).fetch().map(function(x) {
     var d = new Date(x.start);
-    return monthNames[d.getMonth()];
+    if(d.getFullYear() === 2018){//Here's the crucial point
+      return monthNames[d.getMonth()];
+    }
+    
   }), true);
   return distinctMonths;
 };

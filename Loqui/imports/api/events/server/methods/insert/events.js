@@ -10,8 +10,7 @@ Meteor.methods({
       title: String,
       start: String,
       end: String,
-      department: String,
-      // guests: Number
+      department: String
     });
 
     try {

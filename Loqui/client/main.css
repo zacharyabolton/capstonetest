@@ -84,6 +84,11 @@ html{
 #viewBtn{
 	width: 100%;
 	margin-bottom: 1.2rem;
+	border: none;
+	background-color: #dddddd;
+	color: #777777;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
 }
 
 /*--------END viewWrapper--------------*/

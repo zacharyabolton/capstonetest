@@ -64,8 +64,7 @@ Template.addEditEventModal.events({
           title: template.find( '[name="title"]' ).value,
           start: template.find( '[name="start"]' ).value,
           end: template.find( '[name="end"]' ).value,
-          department: template.find( '[name="department"]' ).value,
-          //guests: parseInt( template.find( '[name="guests"]' ).value, 10 )
+          department: template.find( '[name="department"]' ).value
         };
 
     if ( submitType === 'editEvent' ) {

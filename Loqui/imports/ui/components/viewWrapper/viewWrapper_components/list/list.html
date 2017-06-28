@@ -1,8 +1,21 @@
 <template name="list">
-	<h3>I am the list template!</h3>
 	<ul>
-		{{#each events}}
+	{{#each year}}
+		<li><h2>{{this}}</h2></li>
+		<ul>
+		{{#each month}}
+			<li><h3>{{this}}</h3>
+				<ul id="{{this}}">
+					{{#each events}}
+						<li>{{title}}</li>
+					{{/each}}
+				</ul>
+			</li>
+		{{/each}}
+		</ul>
+	{{/each}}
+		<!-- {{#each events}}
 	    <li>{{title}} - {{month}}</li>
-	  {{/each}}
+	  {{/each}} -->
   </ul>
 </template>

@@ -62,8 +62,8 @@ Template.addEditEventModal.events({
         submitType = eventModal.type === 'edit' ? 'editEvent' : 'addEvent',
         eventItem  = {
           title: template.find( '[name="title"]' ).value,
-          start: template.find( '[name="start"]' ).value,
-          end: template.find( '[name="end"]' ).value,
+          start: new Date(template.find( '[name="start"]' ).value).toISOString(),
+          end: new Date(template.find( '[name="end"]' ).value).toISOString(),
           department: template.find( '[name="department"]' ).value
         };
 
@@ -77,14 +77,14 @@ Template.addEditEventModal.events({
       } else {
         Bert.alert( `Event ${ eventModal.type }ed!`, 'success' );
         closeModal();
-        //clearModal();// added
+        clearModal();// added
       }
     });
   },
   'click .delete-event' ( event, template ) {
   	event.preventDefault();
     let eventModal = Session.get( 'eventModal' );
-    if ( confirm( 'Are you sure? This is permanent.' ) ) {
+    if ( confirm( 'Deleting this is permanent!' ) ) {
       Meteor.call( 'removeEvent', eventModal.event, ( error ) => {
         if ( error ) {
           Bert.alert( error.reason, 'danger' );

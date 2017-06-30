@@ -7,10 +7,10 @@ import {Events} from '../../../../../api/events/events.js';
 
 import './list.html';
 
-let isPast = ( date ) => {
-  let today = moment().format();
-  return moment( today ).isAfter( date );
-};
+// let isPast = ( date ) => {
+//   let today = moment().format();
+//   return moment( today ).isAfter( date );
+// };
 
 let monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
@@ -31,10 +31,7 @@ let findMonths = function(){
     sort: {start: 1}, fields: {start: true}
   }).fetch().map(function(x) {
     var d = new Date(x.start);
-    if(d.getFullYear() === 2018){//Here's the crucial point
-      return monthNames[d.getMonth()];
-    }
-    
+      return monthNames[d.getMonth()];    
   }), true);
   return distinctMonths;
 };
@@ -46,25 +43,23 @@ Template.list.onCreated( () => {
 
 Template.list.helpers({
   year() {
-    var foundYears = findYears();
-    //console.log(this);
+    foundYears = findYears();
     return foundYears;
   },
   month() {
+    console.log(this);
     var foundMonthNames = findMonths();
-    //console.log(this);
-    return foundMonthNames;
+    return foundMonthNames;//probably needs fixing
     // var d = new Date(this.start);
     // return monthNames[d.getMonth()];
   },
-  events() {
-    // var selectedDep = Session.get('selectedDep');
-    // var thisToString = this.toString();
-
-    // selectedDep.month = thisToString;
+  // events() {
+  //   // var selectedDep = Session.get('selectedDep');
+  //   // var thisToString = this.toString();
+  //   // selectedDep.month = thisToString;
     
-    // console.log(selectedDep);
+  //   // console.log(selectedDep);
 
-    return Events.find();
-  }
+  //   return Events.find();
+  // }
 });

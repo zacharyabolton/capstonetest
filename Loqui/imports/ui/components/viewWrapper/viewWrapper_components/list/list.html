@@ -1,21 +1,32 @@
-<template name="list">
-	<ul>
-	{{#each year}}
-		<li><h2>{{this}}</h2></li>
-		<ul>
-		{{#each month}}
-			<li><h3>{{this}}</h3>
-				<ul id="{{this}}">
-					{{#each events}}
-						<li>{{title}}</li>
+			<template name="list">
+			<!-- 	<ul>
+					{{#each year}}
+						<li><h2>{{this}}</h2></li>
+						<ul>
+							{{#each month}}
+								<li><h3>{{this}}</h3>
+									<ul>
+										{{#each events}}
+											<li>{{title}}</li>
+										{{/each}}
+									</ul>
+								</li>
+							{{/each}}
+						</ul>
 					{{/each}}
-				</ul>
-			</li>
-		{{/each}}
-		</ul>
-	{{/each}}
-		<!-- {{#each events}}
-	    <li>{{title}} - {{month}}</li>
-	  {{/each}} -->
-  </ul>
-</template>
+			  </ul> -->
+			  <ul>
+			  	{{#each year}}
+				  	<li>
+				  		<h2>{{this}}</h2>
+				  	</li>
+				  	<ul>
+				  		{{#each month}}
+				  			<li>
+				  				<h3>{{this}}</h3>
+				  			</li>
+				  		{{/each}}
+				  	</ul>
+				  {{/each}}
+			  </ul>
+			</template>

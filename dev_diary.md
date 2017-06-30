@@ -59,3 +59,7 @@
 	Greatly improved UI IMHO. What i've learned: keep things simple for two reasons. One: it's better UI. Two: why waste time when you might need to scrap it later.
 
 	I have hooked up the list template to the events db. Next I need to find a way to select by department...
+
+06-29-17
+
+	Skipped entries for several days. Got the list view started but faceing some challenges parsing dates, particularly how to Query MongoDB with MM & YY.

@@ -75,3 +75,5 @@
 		• User interface
 		• Submit button on/DayClick off
 		• Submtter/User login
+
+	Problem: events that fall on the current day do not show up in list view but the distinct year and month headers still do...

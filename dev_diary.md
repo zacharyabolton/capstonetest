@@ -62,4 +62,16 @@
 
 06-29-17
 
-	Skipped entries for several days. Got the list view started but faceing some challenges parsing dates, particularly how to Query MongoDB with MM & YY.
+	Skipped entries for several days. Got the list view started but facing some challenges parsing dates, particularly how to Query MongoDB with MM & YY.
+
+07-01-17
+
+	Got listView proof of concept.
+	Next steps:
+		• Responsive cal items
+		• Details page and plumbing
+		• Interested filter
+		• Search functionality
+		• User interface
+		• Submit button on/DayClick off
+		• Submtter/User login

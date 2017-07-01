@@ -83,12 +83,16 @@ html{
 
 #viewBtn{
 	width: 100%;
-	margin-bottom: 1.2rem;
+	margin-bottom: 0;
 	border: none;
 	background-color: #dddddd;
 	color: #777777;
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
+}
+
+#events-calendar{
+	margin-top: 1.2rem;
 }
 
 /*--------END viewWrapper--------------*/

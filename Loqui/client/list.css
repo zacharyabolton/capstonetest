@@ -1,0 +1,30 @@
+#ulShell{
+	padding-top: 0;
+	margin-top: 0;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.ulSubShell{
+	padding-right: 2rem;
+	padding-left: 2rem;
+}
+
+.liYear{
+	text-align: center;
+	list-style-type: none;
+	background-color: orange;
+}
+
+.liMonth{
+	list-style-type: none;
+}
+
+.divEvent{
+	font-weight: 900;
+}
+
+.spanDep{
+	color: grey;
+	text-align: right;
+}

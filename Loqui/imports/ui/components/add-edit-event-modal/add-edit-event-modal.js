@@ -62,11 +62,10 @@ Template.addEditEventModal.events({
         submitType = eventModal.type === 'edit' ? 'editEvent' : 'addEvent',
         eventItem  = {
           title: template.find( '[name="title"]' ).value,
-          start: new Date(template.find( '[name="start"]' ).value).toISOString(),
-          end: new Date(template.find( '[name="end"]' ).value).toISOString(),
+          start: new Date(template.find( '[name="start"]' ).value),
+          end: new Date(template.find( '[name="end"]' ).value),
           department: template.find( '[name="department"]' ).value
         };
-
     if ( submitType === 'editEvent' ) {
       eventItem._id   = eventModal.event;
     }

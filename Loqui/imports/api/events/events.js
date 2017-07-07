@@ -22,11 +22,11 @@ let EventsSchema = new SimpleSchema({
     label: 'The title of this congress.'
   },
   'start': {
-    type: String,
+    type: Date,
     label: 'When this event will start.'
   },
   'end': {
-    type: String,
+    type: Date,
     label: 'When this event will end.'
   },
   'department': {

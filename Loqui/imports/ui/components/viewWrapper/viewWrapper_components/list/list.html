@@ -1,5 +1,5 @@
 <template name="list">
-  <ul id="ulShell">
+  <!-- <ul id="ulShell">
     {{#each year in getYears}}
       <li class="liYear">
         <h2>{{year}}</h2>
@@ -10,13 +10,35 @@
             <h3>{{month}}</h3>
           </li>
           <ul>
-		        {{#each event in (getEvents month year)}}
-		          <li>
-		            <h4>{{dayOfWeek event.start}} – {{formatDate event.start}}</h4>
-		            <div class="divEvent">{{event.title}} <span class="spanDep pull-right">{{event.department}}</span></div>
-		          </li>
-		        {{/each}}
-		      </ul>
+  	        {{#each event in (getEvents month year)}}
+  	          <li>
+  	            <h4>{{dayOfWeek event.start}} – {{formatDate event.start}}</h4>
+  	            <div class="divEvent">{{event.title}} <span class="spanDep pull-right">{{event.department}}</span></div>
+  	          </li>
+  	        {{/each}}
+  	      </ul>
+        {{/each}}
+      </ul>
+    {{/each}}
+  </ul> -->
+  <ul id="ulShell">
+    {{#each year in getYears}}
+      <li class="liYear">
+        <h2>{{year}}</h2>
+      </li>
+      <ul class="ulSubShell">
+        {{#each monthNumber in (getMonths year)}}
+          <li class="liMonth">
+            <h3>{{monthName monthNumber}}</h3>
+          </li>
+          <ul>
+            {{#each event in (getEvents monthNumber year)}}
+              <li>
+                <h4><!-- {{dayOfWeek event.start}} – {{formatDate event.start}} --></h4>
+                <div class="divEvent"><!-- {{event.title}} --> {{start}}<span class="spanDep pull-right">{{event.department}}</span></div>
+              </li>
+            {{/each}}
+          </ul>
         {{/each}}
       </ul>
     {{/each}}

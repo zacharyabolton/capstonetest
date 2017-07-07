@@ -8,8 +8,8 @@ Meteor.methods({
   'addEvent'( event ) {
     check( event, {
       title: String,
-      start: String,
-      end: String,
+      start: Date,
+      end: Date,
       department: String
     });
 

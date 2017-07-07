@@ -38,6 +38,7 @@ Template.calendar.onRendered( () => {
       element.find( '.fc-content' ).html(
         `<h4>${ event.title }</h4>
          <p class="type-${ event.department }">#${ event.department }</p>
+         <p>#${ new Date(event.start) }</p>
         `
       );
     },eventDrop( event, delta, revert ) {

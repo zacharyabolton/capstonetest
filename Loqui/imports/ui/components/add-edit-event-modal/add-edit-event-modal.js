@@ -23,6 +23,9 @@ let clearModal = () => {
 	});
 }
 
+let tzOffset = new Date().getTimezoneOffset();
+console.log(tzOffset);
+
 Template.addEditEventModal.helpers({
   modalType( type ) {
     let eventModal = Session.get( 'eventModal' );

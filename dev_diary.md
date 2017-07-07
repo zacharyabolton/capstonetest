@@ -77,3 +77,10 @@
 		• Submtter/User login
 
 	Problem: events that fall on the current day do not show up in list view but the distinct year and month headers still do...
+
+07-07-17
+	
+	List logic quasi complete. Purely using JS dates now but having issues with GMT-3 local time zone screwing up the calender and shifting new events one day prior. Left a question on The Meteor Chef and got an answer at:
+
+	https://themeteorchef.com/tutorials/reactive-calendars-with-fullcalendar#comment-m2gEyibj7BdzHGWLF
+	

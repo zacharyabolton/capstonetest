@@ -34,8 +34,8 @@
           <ul>
             {{#each event in (getEvents monthNumber year)}}
               <li>
-                <h4><!-- {{dayOfWeek event.start}} – {{formatDate event.start}} --></h4>
-                <div class="divEvent"><!-- {{event.title}} --> {{start}}<span class="spanDep pull-right">{{event.department}}</span></div>
+                <h4>{{dayOfWeek event.start}} – {{formatDate event.start}}</h4>
+                <div class="divEvent">{{event.title}}<span class="spanDep pull-right">{{event.department}}</span></div>
               </li>
             {{/each}}
           </ul>

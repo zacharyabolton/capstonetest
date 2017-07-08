@@ -17,9 +17,9 @@ Template.calendar.onCreated( () => {
   template.subscribe( 'events' );
 });
 
-Template.calendar.onRendered( () => {
-  $( '#events-calendar' ).fullCalendar({
-    events( start, end, timezone, callback ) {
+Template.calendar.onRendered(()=>{
+  $('#events-calendar').fullCalendar({
+    events: function( start, end, timezone, callback ) {
       var selectedDep = Session.get('selectedDep');
 
       let data = Events.find(selectedDep).fetch().map( ( event ) => {
@@ -33,15 +33,16 @@ Template.calendar.onRendered( () => {
         callback( data );
       }
     },
+    timezone: "UTC",
     //update our initialization of FullCalendar to customize event styles
-    eventRender( event, element ) {
+    eventRender: function( event, element ) {
       element.find( '.fc-content' ).html(
         `<h4>${ event.title }</h4>
          <p class="type-${ event.department }">#${ event.department }</p>
-         <p>#${ new Date(event.start) }</p>
         `
       );
-    },eventDrop( event, delta, revert ) {
+    },
+    eventDrop: function( event, delta, revert ) {
       let date = event.start.format();
       if ( !isPast( date ) ) {
         let update = {
@@ -60,16 +61,15 @@ Template.calendar.onRendered( () => {
         Bert.alert( 'Sorry, you can\'t move items to the past!', 'danger' );
       }
     },
-    dayClick( date ) {
+    dayClick: function( date ) {
       Session.set( 'eventModal', { type: 'add', date: date.format() } );
       $( '#add-edit-event-modal' ).modal( 'show' );
     },
-    eventClick( event ) {
+    eventClick: function( event ) {
       Session.set( 'eventModal', { type: 'edit', event: event._id } );
       $( '#add-edit-event-modal' ).modal( 'show' );
     }
   });
-
   //to ensure that our calendar data always updates
   Tracker.autorun( () => {
     Events.find().fetch();

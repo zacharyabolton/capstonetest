@@ -31,7 +31,7 @@ Template.list.helpers({
     return dayNumber;
   },
   dayOfWeek(start) {
-    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     var x = Number(new Date(start).getDay());
     var dayName = days[x];
     return dayName;
@@ -54,10 +54,14 @@ Template.list.helpers({
     return _.uniq(months); // this returns integers in [0,11]
   },
   getEvents(monthNumber,year){
+    let tzOffset = new Date().getTimezoneOffset();
     var selectedDep = Session.get('selectedDep');
+    var preMaxDate = new Date(year,monthNumber+1,1);
+    var maxDate = new Date((preMaxDate - 60000)-(60000*tzOffset));
+    console.log(maxDate);
     return Events.find(
       { $and: [
-        {start: {$gte: new Date(year,monthNumber,1), $lt: new Date(year,monthNumber+1,1)}},
+        {start: {$gte: new Date(year,monthNumber,1), $lt: maxDate}},
         selectedDep,
         upcoming
       ]},

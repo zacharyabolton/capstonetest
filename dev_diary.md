@@ -83,4 +83,8 @@
 	List logic quasi complete. Purely using JS dates now but having issues with GMT-3 local time zone screwing up the calender and shifting new events one day prior. Left a question on The Meteor Chef and got an answer at:
 
 	https://themeteorchef.com/tutorials/reactive-calendars-with-fullcalendar#comment-m2gEyibj7BdzHGWLF
+
+07-08-17
+
+	Serious improvements with TZ problems but still having an issue with events that fall on the first of the month. I belive it is an issue with my GMT-003 location.
 	

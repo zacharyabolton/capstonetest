@@ -60,13 +60,15 @@ Template.addEditEventModal.helpers({
 Template.addEditEventModal.events({
   'submit form' ( event, template ) {
     event.preventDefault();
+    var submitStart = new Date(template.find( '[name="start"]' ).value);
+    var submitEnd = new Date(template.find( '[name="end"]' ).value);
 
     let eventModal = Session.get( 'eventModal' ),
         submitType = eventModal.type === 'edit' ? 'editEvent' : 'addEvent',
         eventItem  = {
           title: template.find( '[name="title"]' ).value,
-          start: new Date(template.find( '[name="start"]' ).value),
-          end: new Date(template.find( '[name="end"]' ).value),
+          start: new Date(submitStart.getTime() + (tzOffset*60000)),
+          end: new Date(submitEnd.getTime() + (tzOffset*60000)),
           department: template.find( '[name="department"]' ).value
         };
     if ( submitType === 'editEvent' ) {

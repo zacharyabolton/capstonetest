@@ -25,9 +25,13 @@ Template.list.onCreated( () => {
   template.subscribe( 'events' );
 });
 
+let testing = new Date("2017-07-01");
+let testingTwo = moment(testing).utc().format('llll');
+console.log(testingTwo);
+
 Template.list.helpers({
   formatDate(start) {
-    var dayNumber = start.getDate();
+    var dayNumber = moment(start).utc().format("Do");
     return dayNumber;
   },
   dayOfWeek(start) {
@@ -39,7 +43,7 @@ Template.list.helpers({
   getYears(){
     var selectedDep = Session.get('selectedDep');
     const years = Events.find({ $and: [ selectedDep, upcoming ] },
-      {sort: {start: 1}}).map(event=>new Date(event.start).getFullYear());
+      {sort: {start: 1}}).map(event=>moment(event.start).utc().year());
     return _.uniq(years)
   },
   getMonths(year){
@@ -50,18 +54,20 @@ Template.list.helpers({
         selectedDep,
         upcoming
         ]},
-      {sort: {start: 1}}).map(event=>new Date(event.start).getMonth());
+      {sort: {start: 1}}).map(event=>moment(event.start).utc().month());
     return _.uniq(months); // this returns integers in [0,11]
   },
   getEvents(monthNumber,year){
-    let tzOffset = new Date().getTimezoneOffset();
     var selectedDep = Session.get('selectedDep');
-    var preMaxDate = new Date(year,monthNumber+1,1);
-    var maxDate = new Date((preMaxDate - 60000)-(60000*tzOffset));
-    console.log(maxDate);
+    
+    let getEventsStart = new Date(year,monthNumber,1);
+    let getEventsEnd = new Date(year,monthNumber+1,1);
+    console.log(moment(getEventsStart).utc());
+    console.log(moment(getEventsEnd).utc());
+
     return Events.find(
       { $and: [
-        {start: {$gte: new Date(year,monthNumber,1), $lt: maxDate}},
+        {start: {$gte: getEventsStart, $lt: getEventsEnd}},
         selectedDep,
         upcoming
       ]},

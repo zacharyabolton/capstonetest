@@ -87,4 +87,8 @@
 07-08-17
 
 	Serious improvements with TZ problems but still having an issue with events that fall on the first of the month. I belive it is an issue with my GMT-003 location.
+
+07-11-17
+
+	Hacky fix for events falling on first issue: moving my $gte & $lt querys back a day. Works for now. Next step is making a "Add Event" page rather than modal (unless multi page is an issue for mobile build).
 	

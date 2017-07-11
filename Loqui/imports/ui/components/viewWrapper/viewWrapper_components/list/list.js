@@ -25,10 +25,6 @@ Template.list.onCreated( () => {
   template.subscribe( 'events' );
 });
 
-let testing = new Date("2017-07-01");
-let testingTwo = moment(testing).utc().format('llll');
-console.log(testingTwo);
-
 Template.list.helpers({
   formatDate(start) {
     var dayNumber = moment(start).utc().format("Do");
@@ -60,14 +56,9 @@ Template.list.helpers({
   getEvents(monthNumber,year){
     var selectedDep = Session.get('selectedDep');
     
-    let getEventsStart = new Date(year,monthNumber,1);
-    let getEventsEnd = new Date(year,monthNumber+1,1);
-    console.log(moment(getEventsStart).utc());
-    console.log(moment(getEventsEnd).utc());
-
     return Events.find(
       { $and: [
-        {start: {$gte: getEventsStart, $lt: getEventsEnd}},
+        {start: {$gte: new Date(year,monthNumber,0), $lt: new Date(year,monthNumber+1,0)}},
         selectedDep,
         upcoming
       ]},

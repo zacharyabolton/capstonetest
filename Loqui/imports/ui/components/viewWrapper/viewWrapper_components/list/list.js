@@ -25,6 +25,14 @@ Template.list.onCreated( () => {
   template.subscribe( 'events' );
 });
 
+Template.list.events({
+  'click .divEvent': function( event ){
+    Session.set( 'eventModal', { type: 'edit', event: event._id } );
+    $( '#add-edit-event-modal' ).modal( 'show' );
+    console.log();
+  }
+})
+
 Template.list.helpers({
   formatDate(start) {
     var dayNumber = moment(start).utc().format("Do");

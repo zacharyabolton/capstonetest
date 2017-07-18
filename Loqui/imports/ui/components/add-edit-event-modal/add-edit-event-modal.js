@@ -16,10 +16,7 @@ let clearModal = () => {
 	$(this)
 		.find("input,textarea")
 			.val('')
-			.end();// can remove ; if below is used
-		// .find("input[type=checkbox], input[type=radio]")
-		//    .prop("checked", "")
-		//    .end();
+			.end();
 	});
 }
 
@@ -76,7 +73,7 @@ Template.addEditEventModal.events({
       } else {
         Bert.alert( `Event ${ eventModal.type }ed!`, 'success' );
         closeModal();
-        clearModal();// added
+        //clearModal();// added, I think no longer needed
       }
     });
   },
@@ -95,8 +92,7 @@ Template.addEditEventModal.events({
     }
   },
   // this fixes the problem of 2nd edit click showing empty form
-  // kinda a hack. I don't like it.
   'click #cancelForm' (){
-  	window.location.reload();
+  	Session.set( 'eventModal', { type: 'edit', event: event._id } );
   }
 });

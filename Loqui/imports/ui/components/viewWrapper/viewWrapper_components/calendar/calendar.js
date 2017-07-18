@@ -42,29 +42,6 @@ Template.calendar.onRendered(()=>{
         `
       );
     },
-    eventDrop: function( event, delta, revert ) {
-      let date = event.start.format();
-      if ( !isPast( date ) ) {
-        let update = {
-          _id: event._id,
-          start: date,
-          end: date
-        };
-
-        Meteor.call( 'editEvent', update, ( error ) => {
-          if ( error ) {
-            Bert.alert( error.reason, 'danger' );
-          }
-        });
-      } else {
-        revert();
-        Bert.alert( 'Sorry, you can\'t move items to the past!', 'danger' );
-      }
-    },
-    dayClick: function( date ) {
-      Session.set( 'eventModal', { type: 'add', date: date.format() } );
-      $( '#add-edit-event-modal' ).modal( 'show' );
-    },
     eventClick: function( event ) {
       Session.set( 'eventModal', { type: 'edit', event: event._id } );
       $( '#add-edit-event-modal' ).modal( 'show' );

@@ -9,10 +9,9 @@ Meteor.methods({
     check( event, {
       _id: String,
       title: Match.Optional( String ),
-      start: String,
-      end: String,
+      start: Date,
+      end: Date,
       department: Match.Optional( String ),
-      // guests: Match.Optional( Number )
     });
 
     try {

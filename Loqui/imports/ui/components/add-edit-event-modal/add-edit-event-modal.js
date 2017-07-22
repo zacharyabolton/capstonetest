@@ -20,6 +20,10 @@ let clearModal = () => {
 	});
 }
 
+Template.addEditEventModal.onRendered(function() {
+    this.$('.datetimepicker').datetimepicker();
+});
+
 Template.addEditEventModal.helpers({
   modalType( type ) {
     let eventModal = Session.get( 'eventModal' );

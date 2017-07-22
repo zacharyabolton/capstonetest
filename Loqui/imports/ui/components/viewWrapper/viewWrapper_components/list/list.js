@@ -26,20 +26,20 @@ Template.list.onCreated( () => {
 });
 
 Template.list.events({
-  'click .divEvent': function( event ){
-    Session.set( 'eventModal', { type: 'edit', event: event._id } );
+  'click .divEvent': function( event, template ){
+    var eventId = event.target.getAttribute("id");
+    Session.set( 'eventModal', { type: 'edit', event: eventId } );
     $( '#add-edit-event-modal' ).modal( 'show' );
-    console.log();
   }
 })
 
 Template.list.helpers({
   formatDate(start) {
-    var dayNumber = moment(start).utc().format("Do");
+    var dayNumber = moment(start).format("Do");
     return dayNumber;
   },
   dayOfWeek(start) {
-    var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     var x = Number(new Date(start).getDay());
     var dayName = days[x];
     return dayName;
@@ -47,7 +47,7 @@ Template.list.helpers({
   getYears(){
     var selectedDep = Session.get('selectedDep');
     const years = Events.find({ $and: [ selectedDep, upcoming ] },
-      {sort: {start: 1}}).map(event=>moment(event.start).utc().year());
+      {sort: {start: 1}}).map(event=>moment(event.start).year());
     return _.uniq(years)
   },
   getMonths(year){
@@ -58,15 +58,16 @@ Template.list.helpers({
         selectedDep,
         upcoming
         ]},
-      {sort: {start: 1}}).map(event=>moment(event.start).utc().month());
+      {sort: {start: 1}}).map(event=>moment(event.start).month());
     return _.uniq(months); // this returns integers in [0,11]
   },
   getEvents(monthNumber,year){
     var selectedDep = Session.get('selectedDep');
-    
+    console.log(new Date(year,monthNumber,0,23,59,59));
+    console.log(new Date(year,monthNumber+1,0,23,59,59));
     return Events.find(
       { $and: [
-        {start: {$gte: new Date(year,monthNumber,0), $lt: new Date(year,monthNumber+1,0)}},
+        {start: {$gte: new Date(year,monthNumber,0,23,59,59), $lt: new Date(year,monthNumber+1,0,23,59,59)}},
         selectedDep,
         upcoming
       ]},

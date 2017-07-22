@@ -33,7 +33,7 @@ Template.calendar.onRendered(()=>{
         callback( data );
       }
     },
-    timezone: "UTC",
+    timezone: "America/Sao_Paulo",
     //update our initialization of FullCalendar to customize event styles
     eventRender: function( event, element ) {
       element.find( '.fc-content' ).html(

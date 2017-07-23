@@ -38,7 +38,6 @@ Template.calendar.onRendered(()=>{
     eventRender: function( event, element ) {
       element.find( '.fc-content' ).html(
         `<h4>${ event.title }</h4>
-         <p class="type-${ event.department }">#${ event.department }</p>
         `
       );
     },

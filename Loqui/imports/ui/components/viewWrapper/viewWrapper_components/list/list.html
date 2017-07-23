@@ -9,9 +9,9 @@
           <li class="liMonth">
             <h3>{{monthName monthNumber}}</h3>
           </li>
-          <ul>
+          <ul class="ulFinalSubShell">
             {{#each event in (getEvents monthNumber year)}}
-              <li>
+              <li class="liEvent">
                 <h4>{{dayOfWeek event.start}} – {{formatDate event.start}}</h4>
                 <div id="{{event._id}}" class="divEvent">{{event.title}}<span class="spanDep pull-right">{{event.department}}</span></div>
               </li>

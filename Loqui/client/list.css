@@ -20,9 +20,30 @@
 	list-style-type: none;
 }
 
+.ulFinalSubShell{
+	padding-right: 0rem;
+	padding-left: 0rem;
+	margin-right: 0rem;
+	margin-left: 0rem;
+}
+
+.liEvent{
+	list-style-type: none;
+	cursor: pointer;
+	border: 1px solid #e8e6e8;
+	border-radius: 0.2rem;
+	padding: 0.5rem;
+	margin-bottom: 0.2rem;
+}
+
+.liEvent:hover{
+	background: #fcf8e3;
+	border: 2px solid #b8ae7e;
+}
+
 .divEvent{
 	font-weight: 900;
-	cursor: pointer;
+	text-overflow: ellipsis;
 }
 
 .spanDep{

@@ -1,52 +1,59 @@
 .fc-event-container {
-  padding: 5px !important;
+  padding: 0.01rem !important;
 }
 
 .fc-event {
-  padding: 5px 10px;
+  padding: 0.15rem 0.3rem;
   border-color: #ddd;
   background: #fff !important;
 }
+
+.fc-event:hover {
+  background: #fcf8e3 !important;
+  border: 2px solid #b8ae7e;
+}
+
 .fc-content {
   color: #444;
   cursor: pointer;
 }
 
-h4,
-h5 {
-  margin: 0;
-  font-weight: normal;
-}
-
 h4 {
+  margin: 0;
+  font-weight: bold;
   color: #666;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.75rem;
+  line-height: 1rem;
   white-space: normal;
 }
 
-h5 {
-  color: #888;
-  font-size: 12px;
-  margin-top: 5px;
-}
 
-.guest-count {
-  margin: 5px 0;
-}
 
-p[class^="type-"] {
-  margin: 0;
-}
+/*--------Start media queries----------*/
 
-p[class="type-Corporate"] {
-  color: red;
-}
+@media only screen and (max-width: 575px){ /* xtra small */
 
-p[class="type-Wedding"] {
-  color: green;
-}
 
-p[class="type-Birthday"] {
-  color: blue;
-}
+} /* END xtra small */
+
+@media only screen and (min-width: 576px) and (max-width: 767px){ /* small */
+
+
+} /* END small */
+
+@media only screen and (min-width: 768px) and (max-width: 991px){ /* medium */
+
+
+} /* END medium */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){ /* large */
+
+
+} /* END large */
+
+@media only screen and (min-width: 1200px){ /* xtra large */
+
+
+} /* END xtra large */
+
+/*--------Start media queries----------*/

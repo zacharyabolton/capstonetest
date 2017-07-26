@@ -96,7 +96,7 @@ Template.addEditEventModal.events({
     }
   },
   // this fixes the problem of 2nd edit click showing empty form
-  'click #cancelForm' (){
-  	Session.set( 'eventModal', { type: 'edit', event: event._id } );
-  }
+  // 'click #cancelForm' (){
+  // 	Session.set( 'eventModal', { type: 'edit', event: event._id } );
+  // }
 });

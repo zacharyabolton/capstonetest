@@ -13,11 +13,13 @@
 .liYear{
 	text-align: center;
 	list-style-type: none;
-	background-color: orange;
+	background-color: rgba( 82,136, 82,1);
+	background-image: linear-gradient(to left, rgba(247,224,205,1), rgba(185,189,199,1) 100%);
 }
 
 .liMonth{
 	list-style-type: none;
+	color: rgba( 61,107,107,1);
 }
 
 .ulFinalSubShell{
@@ -30,10 +32,12 @@
 .liEvent{
 	list-style-type: none;
 	cursor: pointer;
-	border: 1px solid #e8e6e8;
+	border: 2px solid rgba(178,136,101,0);
 	border-radius: 0.2rem;
 	padding: 0.5rem;
 	margin-bottom: 0.2rem;
+	background-color: rgba(178,136,101,0.1);
+	background-image: linear-gradient(to top, rgba(178,136,101,0), rgba(178,136,101,0.1) 100%);
 }
 
 .liEvent:hover{

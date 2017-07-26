@@ -4,12 +4,31 @@ html{
 	font-size: 16px;
 }
 
+body{
+	background-color: rgba(225,229,229,1);
+}
+
 /*--END global styles-------------*/
 
 /*------------navbar--------------*/
 
+nav.navbar.navbar-default{
+	border: none;
+	border-radius: 0px;
+}
+
 .navbar-btn{
 	margin-right: 0.8rem;
+	background-color: rgba(247,224,205,0);
+	border: none;
+}
+
+.navbar-btn:hover{
+	background-color: rgba(212,178,151,1);
+}
+
+div.container-fluid{
+	background-color: rgba(247,224,205,1);
 }
 
 /*--------END navbar--------------*/
@@ -31,13 +50,23 @@ html{
 	padding-right: 0rem;
 	border: none;
 	border-radius: 0rem;
-
 }
 
 .calDBselect button{
 	border: none;
 	border-radius: 0rem;
+	background-color: rgba(247,205,205,0);
+	font-size: 0.9rem;
+}
 
+button#dropdownMenu1.btn.btn-default.dropdown-toggle.col-xs-12, 
+button#interested.btn.btn-default.col-xs-12{
+	background-color: rgba(172,187,187,0);
+}
+
+button#dropdownMenu1.btn.btn-default.dropdown-toggle.col-xs-12:hover, 
+button#interested.btn.btn-default.col-xs-12:hover{
+	background-color: rgba(172,187,187,1);
 }
 
 #dropdown-menu{
@@ -46,25 +75,26 @@ html{
 	padding: 0rem;
 	border: none;
 	width: 200%;
+	background-image: linear-gradient(to left, rgba(172,187,187,1), rgba(185,189,199,1), rgba(172,187,187,1) 100%);
 }
 
 .departmentDropDownItem, #allDeps{
-	background-color: #cfcfcf;
+	background-color: rgba(172,187,187,0);
 	font-weight: bold;
 	padding-left: 1rem;
 	padding-right: 1rem;
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
-	border-top: 1px solid grey;
+	/*border-top: 1px solid grey;*/
 }
 
 .calDBselect ul li:hover{
-	background-color: white;
+	background-color: rgba(123,148,148,1);
 	cursor: pointer;
 }
 
 #allDeps:hover{
-	background-color: white;
+	background-color: rgba(123,148,148,1);
 }
 
 .departmentDropDownItem span{
@@ -85,7 +115,8 @@ html{
 	width: 100%;
 	margin-bottom: 0;
 	border: none;
-	background-color: #dddddd;
+	background-color: rgba(212,191,151,1);
+	background-image: linear-gradient(to left, rgba(247,224,205,1), rgba(212,191,151,1), rgba(247,224,205,1) 100%);
 	color: #777777;
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
@@ -95,24 +126,30 @@ html{
 	margin-top: 1.2rem;
 }
 
+div#viewWrapper.container.well{
+	background-color: rgba(247,224,205,1);
+	border:none;
+	box-shadow: none;
+	border-radius: 0px;
+}
+
 /*--------END viewWrapper--------------*/
 
 /*--------Start media queries----------*/
 
 @media only screen and (max-width: 575px){ /* xtra small */
-	/* CAN BE DELETED: for prototyping only */
-	body{
-		background-color: violet;
+
+	.spanDep{
+		display: none;
 	}
-	/* END CAN BE DELETED*/
 
 } /* END xtra small */
 
 @media only screen and (min-width: 576px) and (max-width: 767px){ /* small */
 	/* CAN BE DELETED: for prototyping only */
-	body{
+	/*body{
 		background-color: red;
-	}
+	}*/
 	/* END CAN BE DELETED*/
 
 
@@ -121,28 +158,24 @@ html{
 
 @media only screen and (min-width: 768px) and (max-width: 991px){ /* medium */
 	/* CAN BE DELETED: for prototyping only */
-	body{
+	/*body{
 		background-color: orange;
-	}
+	}*/
 	/* END CAN BE DELETED*/
 
 } /* END medium */
 
 @media only screen and (min-width: 992px) and (max-width: 1199px){ /* large */
 	/* CAN BE DELETED: for prototyping only */
-	body{
+	/*body{
 		background-color: yellow;
-	}
+	}*/
 	/* END CAN BE DELETED*/
 
 } /* END large */
 
 @media only screen and (min-width: 1200px){ /* xtra large */
-	/* CAN BE DELETED: for prototyping only */
-	body{
-		background-color: green;
-	}
-	/* END CAN BE DELETED*/
+	
 
 
 } /* END xtra large */

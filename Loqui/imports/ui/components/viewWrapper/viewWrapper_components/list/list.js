@@ -26,7 +26,7 @@ Template.list.onCreated( () => {
 });
 
 Template.list.events({
-  'click .divEvent': function( event, template ){
+  'click .liEvent': function( event, template ){
     var eventId = event.target.getAttribute("id");
     Session.set( 'eventModal', { type: 'edit', event: eventId } );
     $( '#add-edit-event-modal' ).modal( 'show' );

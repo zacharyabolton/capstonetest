@@ -11,15 +11,6 @@ let closeModal = () => {
 	$( '.modal-backdrop' ).fadeOut();
 };
 
-let clearModal = () => {
-	$('#add-edit-event-modal').on('hidden.bs.modal', function (e) {
-	$(this)
-		.find("input,textarea")
-			.val('')
-			.end();
-	});
-}
-
 Template.addEditEventModal.onRendered(function() {
     this.$('.datetimepicker').datetimepicker();
 });
@@ -77,7 +68,6 @@ Template.addEditEventModal.events({
       } else {
         Bert.alert( `Event ${ eventModal.type }ed!`, 'success' );
         closeModal();
-        //clearModal();// added, I think no longer needed
       }
     });
   },

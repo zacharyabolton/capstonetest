@@ -63,8 +63,6 @@ Template.list.helpers({
   },
   getEvents(monthNumber,year){
     var selectedDep = Session.get('selectedDep');
-    console.log(new Date(year,monthNumber,0,23,59,59));
-    console.log(new Date(year,monthNumber+1,0,23,59,59));
     return Events.find(
       { $and: [
         {start: {$gte: new Date(year,monthNumber,0,23,59,59), $lt: new Date(year,monthNumber+1,0,23,59,59)}},

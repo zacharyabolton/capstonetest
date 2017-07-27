@@ -91,4 +91,8 @@
 07-11-17
 
 	Hacky fix for events falling on first issue: moving my $gte & $lt querys back a day. Works for now. Next step is making a "Add Event" page rather than modal (unless multi page is an issue for mobile build).
+
+07-26-17
+
+	Improved UI with CSS and trying to implement better mobile exp. w color coding dep. Having issues figuring out how to associate colors w/departments...
 	

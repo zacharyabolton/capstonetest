@@ -32,11 +32,7 @@ let EventsSchema = new SimpleSchema({
   'department': {
     type: String,
     label: 'Department'
-  },
-  // 'guests': {
-  //   type: Number,
-  //   label: 'The number of guests expected at this event.'
-  // }
+  }
 });
 
 Events.attachSchema( EventsSchema );

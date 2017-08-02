@@ -6,6 +6,8 @@ import { Session } from 'meteor/session';
 import { Events } from '../../../../../api/events/events.js';
 
 import './calendar.html';
+import '../../../day-view/day-view.html';
+import '../../../day-view/day-view.js';
 
 let isPast = ( date ) => {
   let today = moment().format();
@@ -38,39 +40,36 @@ Template.calendar.onRendered(()=>{
     //update our initialization of FullCalendar to customize event styles
     eventRender: function( event, element ) {
       let numValueOfDepName = function(depName){
-        var chars = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-        var letters = '0123456789ABCDEF'.split('');
+        var input = (depName+"      ").toLowerCase().split('');
+        var chars = ' abcdefghijklmnopqrstuvwxyz';
+        var letters = '0123456789ABCDEFBCDE1234567'.split('');
         var color = '#';
-        for (var i = 0; i < 6; i++ ) {
-            color += letters[Math.floor(Math.random() * 16)];
+        for (var i = 0; i < 6; i++ ){
+          color += letters[chars.indexOf(input[i])];
         }
         return color;
       };
-      let getRandomColor = function() {
-          var letters = '0123456789ABCDEF'.split('');
-          var color = '#';
-          for (var i = 0; i < 6; i++ ) {
-              color += letters[Math.floor(Math.random() * 16)];
-          }
-          return color;
-      };
       element.find( '.fc-content' ).html(//Event token html injection
         ` <h4>${ event.title }</h4>
-          <h5 class=" depIndicator 
+          <hr class=" depIndicator 
                       ${event.department}
                     " 
-              style=" color: ${getRandomColor()}; 
-                      font-size: 0.5rem;
+              style=" background-color: ${numValueOfDepName(event.department)};
                     "
           >
-            <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
-          </h5>
         `
       );//END Event token html injection
     },
     eventClick: function( event ) {
-      Session.set( 'eventModal', { type: 'edit', event: event._id } );
-      $( '#add-edit-event-modal' ).modal( 'show' );
+      var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+      if(w > 575){
+        Session.set( 'eventModal', { type: 'edit', event: event._id } );
+        $( '#add-edit-event-modal' ).modal( 'show' );
+      }else{
+        Session.set('selectedDay', event.start.format("YYYY-DD-MM"));
+        var dayView = Session.get('selectedDay');
+        alert(dayView);
+      }
     }
   });
   //to ensure that our calendar data always updates

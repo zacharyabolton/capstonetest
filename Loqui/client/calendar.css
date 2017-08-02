@@ -20,17 +20,7 @@ div.fc-day-grid.fc-unselectable{
   background: #fff !important;
 }
 
-.fc-event:hover {
-  background: #fcf8e3 !important;
-  border: 1px solid #b8ae7e;
-}
-
-.fc-content {
-  color: #444;
-  cursor: pointer;
-}
-
-h4 {
+.fc-content h4 {
   margin: 0;
   font-weight: bold;
   color: #666;
@@ -39,32 +29,142 @@ h4 {
   white-space: normal;
 }
 
-
-
 /*--------Start media queries----------*/
 
 @media only screen and (max-width: 575px){ /* xtra small */
 
+  .spanDep{
+    display: none;
+  }
+
+  .fc-content{
+    padding: 0;
+    margin: 0;
+  }
+
+  .fc-content h4{
+    display: none;
+  }
+
+  .fc-content hr{
+    margin: 0;
+    padding: 0;
+    cursor: auto;
+  }
+
+  a.fc-day-grid-event.fc-h-event.fc-event.fc-start.fc-end{
+    padding: 0;
+    border: 0px;
+  }
+
+  a.fc-day-grid-event.fc-h-event.fc-event.fc-start.fc-not-end{
+    padding: 0;
+  }
+
+  a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-not-end{
+    padding: 0;
+  }
+
+  a.fc-day-grid-event.fc-h-event.fc-event.fc-not-start.fc-end{
+    padding: 0;
+  }
+
+  .depIndicator{
+    min-height: 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  .fc-week{
+    min-height: 4rem !important;
+  }
 
 } /* END xtra small */
 
 @media only screen and (min-width: 576px) and (max-width: 767px){ /* small */
 
+  .fc-event:hover {
+    background: #fcf8e3 !important;
+    border: 1px solid #b8ae7e;
+  }
+
+  .fc-content {
+    color: #444;
+    cursor: pointer;
+  }
+
+  .fc-content hr{
+      display: none;
+  }
+
+  .fc-week{
+    min-height: 5.5rem !important;
+  }
 
 } /* END small */
 
 @media only screen and (min-width: 768px) and (max-width: 991px){ /* medium */
 
+  .fc-event:hover {
+    background: #fcf8e3 !important;
+    border: 1px solid #b8ae7e;
+  }
+
+  .fc-content {
+    color: #444;
+    cursor: pointer;
+  }
+
+  .fc-content hr{
+      display: none;
+  }
+
+  .fc-week{
+    min-height: 5.5rem !important;
+  }
 
 } /* END medium */
 
 @media only screen and (min-width: 992px) and (max-width: 1199px){ /* large */
 
+  .fc-event:hover {
+    background: #fcf8e3 !important;
+    border: 1px solid #b8ae7e;
+  }
+
+  .fc-content {
+    color: #444;
+    cursor: pointer;
+  }
+
+  .fc-content hr{
+      display: none;
+  }
+
+  .fc-week{
+    min-height: 6.5rem !important;
+  }
 
 } /* END large */
 
 @media only screen and (min-width: 1200px){ /* xtra large */
 
+  .fc-event:hover {
+    background: #fcf8e3 !important;
+    border: 1px solid #b8ae7e;
+  }
+
+  .fc-content {
+    color: #444;
+    cursor: pointer;
+  }
+
+  .fc-content hr{
+      display: none;
+  }
+
+  .fc-week{
+    min-height: 7rem !important;
+  }
 
 } /* END xtra large */
 

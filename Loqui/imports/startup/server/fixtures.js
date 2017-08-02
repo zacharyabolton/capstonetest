@@ -8,20 +8,20 @@ Meteor.startup(() => {
   if (Events.find().count() === 0) {
     const data = [
       { title: 'EPHIS', 
-        start: new Date("2017-06-23"), 
-        end: new Date("2017-06-06"), 
+        start: "2017-08-23", 
+        end: "2017-08-23", 
         editable: true, 
         department: 'Art History'
       },
       { title: 'Chem Congress', 
-        start: "2017-07-07", 
-        end: "2017-07-07", 
+        start: "2017-09-07", 
+        end: "2017-09-07", 
         editable: false, 
         department: 'Chemistry'
       },
       { title: 'The biology of Octopi', 
-        start: "2017-08-01", 
-        end: "2017-08-01", 
+        start: "2017-10-01", 
+        end: "2017-10-01", 
         editable: false, 
         department: 'Biology'
       },
@@ -104,8 +104,8 @@ Meteor.startup(() => {
         department: 'Econ'
       },
       { title: 'Limits', 
-        start: "2017-05-27", 
-        end: "2017-05-27", 
+        start: "2017-08-27", 
+        end: "2017-08-27", 
         editable: true, 
         department: 'Mathematics'
       },

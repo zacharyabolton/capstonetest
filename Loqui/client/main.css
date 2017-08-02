@@ -139,22 +139,6 @@ div#viewWrapper.container.well{
 
 @media only screen and (max-width: 575px){ /* xtra small */
 
-	.spanDep{
-		display: none;
-	}
-
-	.fc-content{
-		padding: 0;
-	}
-
-	.fc-content h4{
-		display: none;
-	}
-
-	.depIndicator{
-		margin: 0;
-	}
-
 } /* END xtra small */
 
 @media only screen and (min-width: 576px) and (max-width: 767px){ /* small */

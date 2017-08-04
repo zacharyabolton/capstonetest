@@ -8,32 +8,29 @@
       </div>
       <form id="add-edit-event-form">
         <div class="modal-body">
+
           <div class="form-group">
-            <div class="row">
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="department">Department</label>
-                <input type="text" name="department" class="form-control" value="{{event.department}}">
-              </div>
-              <div class="col-xs-12 col-sm-4">
-                <label for="start">Start</label>
-                <div class="input-group datetimepicker">
-                  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                  <input name="start" class="set-due-date form-control" type="text" value="{{event.start}}" />
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-4">
-                <label for="end">End</label>
-                <div class="input-group datetimepicker">
-                  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                  <input name="end" class="set-due-date form-control" type="text" value="{{#if event.end}}{{event.end}}{{else}}{{event.start}}{{/if}}"/>
-                </div>
+            <input type="text" name="title" class="form-control" value="{{event.title}}" placeholder="Title">
+          </div>
+
+          <div class="form-group">
+
+            <input type="text" name="department" class="form-control col-xs-12" value="{{event.department}}" placeholder="Department">
+
+          </div>
+
+          <div class="form-group">
+
+            <div class="input-daterange input-group form-control" id="datepicker">
+              <div class="col-xs-12 input-group">
+                <input type="text" class="input-sm form-control" name="start" value="{{event.start}}" placeholder="Start Date" />
+                <span class="input-group-addon">to</span>
+                <input type="text" class="input-sm form-control" name="end" value="{{#if event.end}}{{event.end}}{{else}}{{event.start}}{{/if}}" placeholder="End Date"/>
               </div>
             </div>
+
           </div>
-          <div class="form-group">
-            <label for="title">Event Title</label>
-            <input type="text" name="title" class="form-control" value="{{event.title}}">
-          </div>
+          
         </div>
         <div class="modal-footer">
           {{#if modalType 'edit'}}

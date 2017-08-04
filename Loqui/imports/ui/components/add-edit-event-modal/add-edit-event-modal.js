@@ -12,7 +12,10 @@ let closeModal = () => {
 };
 
 Template.addEditEventModal.onRendered(function() {
-    this.$('.datetimepicker').datetimepicker();
+    $('.input-daterange').datepicker({
+      autoclose: true,
+      todayHighlight: true
+    });
 });
 
 Template.addEditEventModal.helpers({
@@ -84,9 +87,5 @@ Template.addEditEventModal.events({
         }
       });
     }
-  },
-  // this fixes the problem of 2nd edit click showing empty form
-  // 'click #cancelForm' (){
-  // 	Session.set( 'eventModal', { type: 'edit', event: event._id } );
-  // }
+  }
 });

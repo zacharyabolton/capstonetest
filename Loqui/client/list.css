@@ -6,11 +6,12 @@
 }
 
 .ulSubShell{
-	padding-right: 2rem;
-	padding-left: 2rem;
+	padding-right: 0rem;
+	padding-left: 0rem;
 }
 
 .liYear{
+	color: grey;
 	text-align: center;
 	list-style-type: none;
 	background-color: rgba( 82,136, 82,1);
@@ -53,6 +54,8 @@
 .divEvent{
 	font-weight: 900;
 	text-overflow: ellipsis;
+	margin-top: 0rem;
+	text-align: center;
 }
 
 .spanDep{

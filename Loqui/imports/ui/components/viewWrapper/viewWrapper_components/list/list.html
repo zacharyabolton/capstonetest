@@ -10,11 +10,8 @@
             <h3>{{monthName monthNumber}}</h3>
           </li>
           <ul class="ulFinalSubShell">
-            {{#each event in (getEvents monthNumber year)}}
-              <li id="{{event._id}}" class="liEvent">
-                <h4 id="{{event._id}}" class="divEvent">{{event.title}}</h4>
-                <div id="{{event._id}}">{{dayOfWeek event.start}} – {{formatDate event.start}}<span id="{{event._id}}" class="spanDep pull-right">{{event.department}}</span></div>
-              </li>
+            {{#each event in (getEvents monthNumber year event)}}
+              {{> oneEvent event=event monthNumber=monthNumber year=year}}
             {{/each}}
           </ul>
         {{/each}}

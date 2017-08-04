@@ -1,8 +1,13 @@
 <template name="dayView">
-  <h1>I am the day view template!</h1>
-  <ul>
-    {{#each events}}
-      <h5>*</h5><li>{{title}}</li>
-    {{/each}}
-  </ul>
+  <div class="mobileDayView">
+    <h2 class="dayHeader">{{dayHeader}}</h2>
+    <ul class="ulFinalSubShell">
+      {{#each events}}
+        <li class="liEvent">
+          <h4 class="divEvent">{{title}}</h4>
+          <div>{{formatTimeRange start end}}<span class="spanDep pull-right">{{department}}</span></div>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 </template>

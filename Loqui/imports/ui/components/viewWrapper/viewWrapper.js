@@ -9,8 +9,8 @@ import './viewWrapper_components/list/list.js';
 
 Template.viewWrapper.onCreated(function() {
   const instance = this;
-  instance.toggleDisplay = new ReactiveVar(false);
-  instance.calOrList = new ReactiveVar("Switch to calendar view");
+  instance.toggleDisplay = new ReactiveVar(true);
+  instance.calOrList = new ReactiveVar("Switch to list view");
 });
 
 Template.viewWrapper.helpers({

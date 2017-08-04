@@ -6,44 +6,21 @@ import {Session} from 'meteor/session';
 import {Events} from '../../../../../api/events/events.js';
 
 import './list.html';
+import './oneEvent/oneEvent.js';
 
 let monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
 
 let today = new Date();
-//today.setDate(today.getDate());
 
 let upcoming = {
   start: {
     $gt: today
   }
-}
-
-Template.list.onCreated( () => {
-  let template = Template.instance();
-  template.subscribe( 'events' );
-});
-
-Template.list.events({
-  'click .liEvent': function( event, template ){
-    var eventId = event.target.getAttribute("id");
-    Session.set( 'eventModal', { type: 'edit', event: eventId } );
-    $( '#add-edit-event-modal' ).modal( 'show' );
-  }
-})
+};
 
 Template.list.helpers({
-  formatDate(start) {
-    var dayNumber = moment(start).format("Do");
-    return dayNumber;
-  },
-  dayOfWeek(start) {
-    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    var x = Number(new Date(start).getDay());
-    var dayName = days[x];
-    return dayName;
-  },
   getYears(){
     var selectedDep = Session.get('selectedDep');
     const years = Events.find({ $and: [ selectedDep, upcoming ] },

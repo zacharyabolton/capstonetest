@@ -36,10 +36,18 @@ Template.calendarsNav.events({
 		var depFilter = {department: thisToString};
     Session.set('selectedDep', depFilter);
     Session.set('depBtnLabel', thisToString);
+    Session.get('dayHeader');
+    Session.set('dayHeader', '');
+    Session.get('selectedDay');
+    Session.set('selectedDay', {department: "jsTestDepartment"} );
 	},
 	'click #allDeps'(){
 		var depFilter = {};
     Session.set('selectedDep', depFilter);
     Session.set('depBtnLabel', 'All Departments');
+    Session.get('dayHeader');
+    Session.set('dayHeader', '');
+    Session.get('selectedDay');
+    Session.set('selectedDay', {department: "jsTestDepartment"} );
 	}
 });

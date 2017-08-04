@@ -1,0 +1,15 @@
+.dayHeader{
+	padding-left: 1rem;
+	list-style-type: none;
+	background-color: rgba( 82,136, 82,1);
+	background-image: linear-gradient(to left, rgba(247,224,205,1), rgba(185,189,199,1) 100%);
+	color: grey;
+}
+
+@media only screen and (min-width: 576px){
+
+	.mobileDayView{
+		display: none;
+	}
+
+}/*end NO mobile*/

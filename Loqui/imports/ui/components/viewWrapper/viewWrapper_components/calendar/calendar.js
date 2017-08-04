@@ -2,12 +2,15 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Tracker } from 'meteor/tracker';
 import { Session } from 'meteor/session';
+import { ReactiveDict } from 'meteor/reactive-dict';
 
 import { Events } from '../../../../../api/events/events.js';
 
 import './calendar.html';
 import '../../../day-view/day-view.html';
 import '../../../day-view/day-view.js';
+
+import { dayHeader } from '../../../day-view/day-view.js';
 
 let isPast = ( date ) => {
   let today = moment().format();
@@ -66,9 +69,20 @@ Template.calendar.onRendered(()=>{
         Session.set( 'eventModal', { type: 'edit', event: event._id } );
         $( '#add-edit-event-modal' ).modal( 'show' );
       }else{
-        Session.set('selectedDay', event.start.format("YYYY-DD-MM"));
-        var dayView = Session.get('selectedDay');
-        alert(dayView);
+        var selection = {start: {
+          $gte: new Date(event.start.format("YYYY-MM-DD")+"T00:00:00"),
+          $lt: new Date(event.start.format("YYYY-MM-DD")+"T23:59:59")
+        }};
+        Session.get('selectedDay');
+        Session.set('selectedDay', selection);
+
+        Session.get('dayHeader');
+        Session.set('dayHeader', event.start.format("dddd MMM Do"));
+
+        //here i want to trigger a scrol to the dayView
+        $('html,body').animate({
+        scrollTop: $(".mobileDayView").offset().top},
+        'slow');
       }
     }
   });

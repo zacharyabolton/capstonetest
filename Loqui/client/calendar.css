@@ -8,6 +8,13 @@ div.fc-day-grid.fc-unselectable{
   background-color: #f6f6f6;
 }
 
+.fc-left h2{
+  list-style-type: none;
+  color: rgba( 61,107,107,1);
+  font-size: 2rem;
+  text-shadow: 0.1rem 0.1rem 0.3rem rgba( 61,107,107,0.75);
+}
+
 /*END My added styles*/
 
 .fc-event-container {
@@ -31,11 +38,16 @@ div.fc-day-grid.fc-unselectable{
 
 /*--------Start media queries----------*/
 
-@media only screen and (max-width: 575px){ /* xtra small */
+@media only screen and (max-width: 450px){ /* mobile phone */
 
-  .spanDep{
-    display: none;
-  }
+.fc-left h2{
+  font-size: 1.09rem;
+  padding-top: 0.4rem;
+}
+
+}
+
+@media only screen and (max-width: 575px){ /* xtra small */
 
   .fc-content{
     padding: 0;

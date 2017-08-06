@@ -95,4 +95,8 @@
 07-26-17
 
 	Improved UI with CSS and trying to implement better mobile exp. w color coding dep. Having issues figuring out how to associate colors w/departments...
+
+08-05-17
+
+	Improved loginButtons as well as datepicker. Two problems. Don't have time picker and have accounts.js folder and file in client which i'm sure is not right. Also, need to figure out how to add permissions on account creation.
 	

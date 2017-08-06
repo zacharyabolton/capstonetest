@@ -1,22 +1,16 @@
 <template name="navbar">
 	<nav class="navbar navbar-default">
     <div class="container-fluid">
-      <div class="nav pull-right">
-      	<div class="navbar-text">
-      		{{> loginButtons align="right"}}
-      	</div>
-      </div>
-      <button type="button" id="submitBtn" class="navbar-btn btn btn-default pull-right">
-        <span class="sr-only">Submit New Event</span>
-        <span class="glyphicon glyphicon-plus"></span>
-      </button>
-      <button type="button" id="searchBtn" class="navbar-btn btn btn-default pull-right">
-        <span class="sr-only">Search</span>
-        <span class="glyphicon glyphicon-search"></span>
-      </button>
-      <!-- BRAND -->
-        <div class="navbar-brand brand">Loqui</div>
-      <!-- END BRAND -->
+      <ul id="loginButtons" class="nav navbar-nav navbar-right">
+        {{> loginButtons}}
+      </ul>
+      {{#if currentUser}}
+        <button type="button" id="submitBtn" class="navbar-btn btn btn-default pull-right">
+          <span class="sr-only">Submit New Event</span>
+          <span class="glyphicon glyphicon-plus"></span>
+        </button>
+      {{/if}}
+      <div class="navbar-brand brand">Loqui</div>
     </div>
 	</nav>	
 </template>

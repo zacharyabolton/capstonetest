@@ -1,6 +1,11 @@
 <template name="App_home">
-  {{> navbar}}
-  {{> calendarsNav}}
-  {{> viewWrapper}}
-  {{> addEditEventModal}}
+	{{#if currentUser}}
+	  {{> navbar}}
+	  {{> calendarsNav}}
+	  {{> viewWrapper}}
+	  {{> addEditEventModal}}
+  {{else}}
+  	{{> navbar}}
+  	{{> welcome}}
+  {{/if}}
 </template>

@@ -10,6 +10,20 @@ body{
 
 /*--END global styles-------------*/
 
+/*------------welcome--------------*/
+
+#welcomeToLoqui{
+	text-align: center;
+	color: #B28865;
+}
+
+#welcomeAccess{
+	text-align: center;
+	color: #5A7F7F;
+}
+
+/*------------/welcome--------------*/
+
 /*------------navbar--------------*/
 
 nav.navbar.navbar-default{
@@ -139,16 +153,25 @@ div#viewWrapper.container.well{
 
 @media only screen and (max-width: 575px){ /* xtra small */
 
+	#loginButtons{
+		float: right;
+	}
+
+	#login-dropdown-list .dropdown-toggle[aria-expanded="true"]{
+		width: 100vw;
+	}
+
 } /* END xtra small */
 
 @media only screen and (min-width: 576px) and (max-width: 767px){ /* small */
-	/* CAN BE DELETED: for prototyping only */
-	/*body{
-		background-color: red;
-	}*/
-	/* END CAN BE DELETED*/
 
+	#loginButtons{
+		float: right;
+	}
 
+	#login-dropdown-list .dropdown-toggle[aria-expanded="true"]{
+		width: 100vw;
+	}
 
 } /* END small */
 

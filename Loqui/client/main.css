@@ -24,6 +24,38 @@ body{
 
 /*------------/welcome--------------*/
 
+/*------------signup--------------*/
+
+#login-dropdown-list label:first-child{
+	text-align: center;
+	font-weight: bolder;
+	font-size: 1.25rem;
+	margin: auto;
+  width: 100%;
+
+}
+
+#login-dropdown-list label:nth-child(1n+2){
+	text-align: center;
+	font-size: 1rem;
+	margin: auto;
+  width: 49%;
+  position: relative;
+  z-index: 9;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+
+#login-dropdown-list label:nth-child(1n+2):hover{
+	color: #B28865;
+}
+
+
+
+
+
+/*------------/signup--------------*/
+
 /*------------navbar--------------*/
 
 nav.navbar.navbar-default{
@@ -155,10 +187,12 @@ div#viewWrapper.container.well{
 
 	#loginButtons{
 		float: right;
+		
 	}
 
 	#login-dropdown-list .dropdown-toggle[aria-expanded="true"]{
 		width: 100vw;
+		
 	}
 
 } /* END xtra small */

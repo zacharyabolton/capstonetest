@@ -100,3 +100,6 @@
 
 	Improved loginButtons as well as datepicker. Two problems. Don't have time picker and have accounts.js folder and file in client which i'm sure is not right. Also, need to figure out how to add permissions on account creation.
 	
+08-08-17
+
+	Added user/contributor field to loginButtons. Styled some. Would like to work with css to make the radio buttons better but I think I will need to know how to inject classes into the package html to do this and I don't now how to do that. It's good for now, and I need to move onto dividing my templates based on user type. I might want to go away from the "u"/"c" seperation to a true/false way, but for now I'll experiment...

@@ -103,3 +103,9 @@
 08-08-17
 
 	Added user/contributor field to loginButtons. Styled some. Would like to work with css to make the radio buttons better but I think I will need to know how to inject classes into the package html to do this and I don't now how to do that. It's good for now, and I need to move onto dividing my templates based on user type. I might want to go away from the "u"/"c" seperation to a true/false way, but for now I'll experiment...
+
+08-09-17
+
+	Implemented some of the divide between user/contributor: submit button, I've added/Interested button, & events I've added filter with Session.
+	Some problems with styling on I've added button.
+	Ongoing issue with lack of "no events found" display.

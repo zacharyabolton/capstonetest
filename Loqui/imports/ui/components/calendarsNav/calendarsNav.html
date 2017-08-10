@@ -13,11 +13,18 @@
 			    {{/each}}
 			  </ul>
 			</div>
-			<!-- <button class="calDBselect col-xs-6"><span class="glyphicon glyphicon-ok"></span> Interested</button> -->
+			{{#if currentUser.profile.contributor}}
 			<div class="calDBselect col-xs-6">
-			  <button class="btn btn-default col-xs-12" type="button" id="interested">
-			    <span class="glyphicon glyphicon-ok"></span> Interested
+			  <button class="btn btn-default col-xs-12" type="button" id="iveAdded" value="{{currentUser._id}}">
+			    <span class="glyphicon glyphicon-star-empty"></span> I've added
 			  </button>
 			</div>
+			{{else}}
+			<div class="calDBselect col-xs-6">
+			  <button class="btn btn-default col-xs-12" type="button" id="interested">
+			    <span class="glyphicon glyphicon-bookmark"></span> Interested
+			  </button>
+			</div>
+			{{/if}}
 		</div>
 </template>

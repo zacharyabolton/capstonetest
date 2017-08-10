@@ -19,7 +19,7 @@ Accounts.ui.config({
         inputType: 'text',
         visible: true,
     }, {
-        fieldName: 'account-type',
+        fieldName: 'contributor',
         showFieldLabel: false,      // If true, fieldLabel will be shown before radio group
         fieldLabel: 'I am a',
         inputType: 'radio',
@@ -28,12 +28,12 @@ Accounts.ui.config({
         data: [{                    // Array of radio options, all properties are required
     		id: 1,                  // id suffix of the radio element
             label: 'User',          // label for the radio element
-            value: 'u',             // value of the radio element, this will be saved.
+            value: '',             // value of the radio element, this will be saved.
             checked: 'checked'              
           }, {
             id: 2,
             label: 'Contributor',
-            value: 'c'
+            value: 'Y'
         }],
         visible: true
     }]

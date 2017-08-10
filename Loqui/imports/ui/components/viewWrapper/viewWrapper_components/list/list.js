@@ -23,28 +23,33 @@ let upcoming = {
 Template.list.helpers({
   getYears(){
     var selectedDep = Session.get('selectedDep');
-    const years = Events.find({ $and: [ selectedDep, upcoming ] },
+    var eventsIveAdded = Session.get('seeEventsIveAdded');
+    const years = Events.find({ $and: [ selectedDep, upcoming, eventsIveAdded ] },
       {sort: {start: 1}}).map(event=>moment(event.start).year());
     return _.uniq(years)
   },
   getMonths(year){
     var selectedDep = Session.get('selectedDep');
+    var eventsIveAdded = Session.get('seeEventsIveAdded');
     const months = Events.find(
       { $and: [
         {start: {$gte: new Date(year,0,1), $lt: new Date(year+1,0,1)}},
         selectedDep,
-        upcoming
+        upcoming,
+        eventsIveAdded
         ]},
       {sort: {start: 1}}).map(event=>moment(event.start).month());
     return _.uniq(months); // this returns integers in [0,11]
   },
   getEvents(monthNumber,year){
     var selectedDep = Session.get('selectedDep');
+    var eventsIveAdded = Session.get('seeEventsIveAdded');
     return Events.find(
       { $and: [
         {start: {$gte: new Date(year,monthNumber,0,23,59,59), $lt: new Date(year,monthNumber+1,0,23,59,59)}},
         selectedDep,
-        upcoming
+        upcoming,
+        eventsIveAdded
       ]},
       {sort: {start: 1}});
   },

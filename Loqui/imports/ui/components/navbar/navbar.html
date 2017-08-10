@@ -4,7 +4,7 @@
       <ul id="loginButtons" class="nav navbar-nav navbar-right">
         {{> loginButtons}}
       </ul>
-      {{#if currentUser}}
+      {{#if currentUser.profile.contributor}}
         <button type="button" id="submitBtn" class="navbar-btn btn btn-default pull-right">
           <span class="sr-only">Submit New Event</span>
           <span class="glyphicon glyphicon-plus"></span>

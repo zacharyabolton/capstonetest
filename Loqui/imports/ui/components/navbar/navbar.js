@@ -9,5 +9,4 @@ Template.navbar.events({
 	  Session.set( 'eventModal', { type: 'add' } );
     $( '#add-edit-event-modal' ).modal( 'show' );
   },
-
 });

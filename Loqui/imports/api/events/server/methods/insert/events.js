@@ -10,7 +10,8 @@ Meteor.methods({
       title: String,
       start: Date,
       end: Date,
-      department: String
+      department: String,
+      owner: String
     });
 
     try {

@@ -59,7 +59,8 @@ Template.addEditEventModal.events({
           title: template.find( '[name="title"]' ).value,
           start: new Date(template.find( '[name="start"]' ).value),
           end: new Date(template.find( '[name="end"]' ).value),
-          department: template.find( '[name="department"]' ).value
+          department: template.find( '[name="department"]' ).value,
+          owner: Meteor.userId()
         };
     if ( submitType === 'editEvent' ) {
       eventItem._id   = eventModal.event;

@@ -32,6 +32,10 @@ let EventsSchema = new SimpleSchema({
   'department': {
     type: String,
     label: 'Department'
+  },
+  'owner': {
+    type: String,
+    label: 'userId'
   }
 });
 

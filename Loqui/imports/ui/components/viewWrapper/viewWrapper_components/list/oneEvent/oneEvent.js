@@ -6,8 +6,13 @@ import './oneEvent.html';
 
 Template.oneEvent.events({
   'click li': function( event, template ){
-    Session.set( 'eventModal', { type: 'edit', event: this.event._id } );
-    $( '#add-edit-event-modal' ).modal( 'show' );
+    if(Meteor.userId() === this.event.owner){
+      Session.set( 'eventModal', { type: 'edit', event: this.event._id } );
+      $( '#add-edit-event-modal' ).modal( 'show' );
+    }else{
+      Session.set( 'detailsModal', { type: 'viewDetails', event: this.event._id } );
+      $( '#details-view-modal' ).modal( 'show' );
+    }
   }
 })
 

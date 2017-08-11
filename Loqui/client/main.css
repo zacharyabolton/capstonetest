@@ -116,6 +116,16 @@ button#interested.btn.btn-default.col-xs-12:hover{
 	background-color: rgba(172,187,187,1);
 }
 
+button#dropdownMenu1.btn.btn-default.dropdown-toggle.col-xs-12, 
+button#iveAdded.btn.btn-default.col-xs-12{
+	background-color: rgba(172,187,187,0);
+}
+
+button#dropdownMenu1.btn.btn-default.dropdown-toggle.col-xs-12:hover, 
+button#iveAdded.btn.btn-default.col-xs-12:hover{
+	background-color: rgba(172,187,187,1);
+}
+
 #dropdown-menu{
 	margin-top: 0rem;
 	border-radius: 0rem;
@@ -132,7 +142,6 @@ button#interested.btn.btn-default.col-xs-12:hover{
 	padding-right: 1rem;
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
-	/*border-top: 1px solid grey;*/
 }
 
 .calDBselect ul li:hover{

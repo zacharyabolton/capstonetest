@@ -13,7 +13,7 @@ let ownerFilter = {};
 
 Template.calendarsNav.onCreated(function(){
   const instance = this;
-  instance.toggleIveAdded = new ReactiveVar(true);
+  instance.toggleIveAdded = new ReactiveVar(false);
   let template = Template.instance();
   template.subscribe( 'events' );
   Session.set('selectedDep', depFilter);
@@ -56,15 +56,15 @@ Template.calendarsNav.events({
     Session.set('selectedDay', {department: "jsTestDepartment"} );
 	},
   'click #iveAdded': function(event, instance){
-
-    var eventsIveAdded = document.getElementById("iveAdded").value;
+    console.log(instance.toggleIveAdded.get());
     instance.toggleIveAdded.set(!instance.toggleIveAdded.get());
     var seeOrNo = instance.toggleIveAdded.get();
     if(seeOrNo){
-      Session.set('seeEventsIveAdded', {owner: eventsIveAdded});
+      document.getElementById("iveAdded").classList.add('active');
+      Session.set('seeEventsIveAdded', {owner: Meteor.userId()});
     }else{
+      document.getElementById("iveAdded").classList.remove('active');
       Session.set('seeEventsIveAdded', ownerFilter);
     }
-    console.log(Session.get('seeEventsIveAdded'));
   }
 });

@@ -109,3 +109,7 @@
 	Implemented some of the divide between user/contributor: submit button, I've added/Interested button, & events I've added filter with Session.
 	Some problems with styling on I've added button.
 	Ongoing issue with lack of "no events found" display.
+
+08-10-17
+
+	Implemented Details view and matching contributor id with event clicked to check if can edit or if user. Need to implement "interested" next and style the details modal.

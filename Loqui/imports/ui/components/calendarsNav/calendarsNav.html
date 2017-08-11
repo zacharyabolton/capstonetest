@@ -1,6 +1,5 @@
 <template name="calendarsNav">
 		<div id="calendarsNav" class="container">
-			<!-- <button class="calDBselect col-xs-6"><span class="glyphicon glyphicon-calendar"></span> All</button> -->
 			<div class="dropdown calDBselect col-xs-6">
 			  <button class="btn btn-default dropdown-toggle col-xs-12" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 			    <span class="glyphicon glyphicon-calendar"></span> {{depBtnLabel}}
@@ -15,7 +14,7 @@
 			</div>
 			{{#if currentUser.profile.contributor}}
 			<div class="calDBselect col-xs-6">
-			  <button class="btn btn-default col-xs-12" type="button" id="iveAdded" value="{{currentUser._id}}">
+			  <button class="btn btn-default col-xs-12" type="button" id="iveAdded">
 			    <span class="glyphicon glyphicon-star-empty"></span> I've added
 			  </button>
 			</div>

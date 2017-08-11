@@ -39,8 +39,12 @@ Template.dayView.helpers({
 
 Template.dayView.events({
   'click .liEvent': function( event, template ){
-  	console.log(template);
-    Session.set( 'eventModal', { type: 'edit', event: this._id } );
-    $( '#add-edit-event-modal' ).modal( 'show' );
+    if(Meteor.userId() === this.owner){
+      Session.set( 'eventModal', { type: 'edit', event: this._id } );
+      $( '#add-edit-event-modal' ).modal( 'show' );
+    }else{
+      Session.set( 'detailsModal', { type: 'viewDetails', event: this._id } );
+      $( '#details-view-modal' ).modal( 'show' );
+    }
   }
 });

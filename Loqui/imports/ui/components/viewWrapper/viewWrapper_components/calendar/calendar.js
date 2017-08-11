@@ -66,8 +66,13 @@ Template.calendar.onRendered(()=>{
     eventClick: function( event ) {
       var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
       if(w > 575){
-        Session.set( 'eventModal', { type: 'edit', event: event._id } );
-        $( '#add-edit-event-modal' ).modal( 'show' );
+        if(Meteor.userId() === event.owner){
+          Session.set( 'eventModal', { type: 'edit', event: event._id } );
+          $( '#add-edit-event-modal' ).modal( 'show' );
+        }else{
+          Session.set( 'detailsModal', { type: 'viewDetails', event: event._id } );
+          $( '#details-view-modal' ).modal( 'show' );//this is where i load in the details page for events...
+        }
       }else{
         var selection = {start: {
           $gte: new Date(event.start.format("YYYY-MM-DD")+"T00:00:00"),

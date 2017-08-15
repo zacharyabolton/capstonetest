@@ -4,7 +4,7 @@
     <ul class="ulFinalSubShell">
       {{#each events}}
         <li class="liEvent">
-          <h4 class="divEvent">{{title}}</h4>
+          <h4 class="divEvent">{{interestedIndicator department _id}} {{title}}</h4>
           <div>{{formatTimeRange start end}}<span class="spanDep pull-right">{{department}}</span></div>
         </li>
       {{/each}}

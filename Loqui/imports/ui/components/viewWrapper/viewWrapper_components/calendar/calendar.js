@@ -2,15 +2,12 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Tracker } from 'meteor/tracker';
 import { Session } from 'meteor/session';
-import { ReactiveDict } from 'meteor/reactive-dict';
 
 import { Events } from '../../../../../api/events/events.js';
 
 import './calendar.html';
-import '../../../day-view/day-view.html';
-import '../../../day-view/day-view.js';
-
-import { dayHeader } from '../../../day-view/day-view.js';
+import './day-view/day-view.html';
+import './day-view/day-view.js';
 
 let isPast = ( date ) => {
   let today = moment().format();
@@ -54,8 +51,28 @@ Template.calendar.onRendered(()=>{
         }
         return color;
       };
+      let interestedIndicator = function(event){
+        if(Meteor.user().profile.contributor){
+          return ``;
+        }else{
+          var depName = event.department;
+          var eventId = event._id;
+          var interestedArray = Meteor.user().profile.interested;
+          for (var i = interestedArray.length - 1; i >= 0; i--) {
+            if(interestedArray[i] === eventId){
+              return `<span class="glyphicon glyphicon-ok" 
+                            aria-hidden="true" 
+                            style="color: ${numValueOfDepName(depName)}">
+                      </span>`;
+            }else{
+              continue;
+            }
+          }
+          return ``;
+        }
+      }
       element.find( '.fc-content' ).html(//Event token html injection
-        ` <h4>${ event.title }</h4>
+        ` <h4>${ interestedIndicator(event) } ${ event.title }</h4>
           <hr class=" depIndicator 
                       ${event.department}
                     " 
@@ -99,9 +116,3 @@ Template.calendar.onRendered(()=>{
     $( '#events-calendar' ).fullCalendar( 'refetchEvents' );
   });
 });
-
-Template.calendar.helpers({
-  colorGenerator(){
-    console.log("colorGenerator fired");
-  }
-})

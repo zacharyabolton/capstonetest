@@ -1,0 +1,19 @@
+.modal-content{
+	background-color: #E6E7EA;
+}
+
+.modal-body{
+	text-align: center;
+}
+
+.modal-body span{
+	color: #69748E;
+}
+
+.modal-body h4{
+	margin-top: 0rem;
+}
+
+.modal-footer{
+	color: #B28865;
+}

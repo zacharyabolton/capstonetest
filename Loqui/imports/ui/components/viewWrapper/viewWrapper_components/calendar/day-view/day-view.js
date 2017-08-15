@@ -1,19 +1,21 @@
 import {Session} from 'meteor/session';
 import {Template} from 'meteor/templating';
 import {Meteor} from 'meteor/meteor';
-import {ReactiveDict} from 'meteor/reactive-dict';
 
 import './day-view.html';
 
-import {Events} from '../../../api/events/events.js';
+import {Events} from '../../../../../../api/events/events.js';
 
-let today = new Date();
-
-let upcoming = {
-  start: {
-    $gt: today
+let numValueOfDepName = function(depName){
+  var input = (depName+"      ").toLowerCase().split('');
+  var chars = ' abcdefghijklmnopqrstuvwxyz';
+  var letters = '0123456789ABCDEFBCDE1234567'.split('');
+  var color = '#';
+  for (var i = 0; i < 6; i++ ){
+    color += letters[chars.indexOf(input[i])];
   }
-}
+  return color;
+};
 
 Template.dayView.onCreated(function dayViewOnCreated() {
   Session.set('selectedDay', {department: "jsTestDepartment"} );
@@ -36,6 +38,25 @@ Template.dayView.helpers({
     var endTime = moment(end).format("h:mm a");
     var timeRange = startTime+" to "+endTime;
     return timeRange;
+  },
+  interestedIndicator(department, _id){
+    if(Meteor.user().profile.contributor){
+      return;
+    }else{
+      depName = department;
+      var interestedArray = Meteor.user().profile.interested;
+      for (var i = interestedArray.length - 1; i >= 0; i--) {
+        if(interestedArray[i] === _id){
+          return Spacebars.SafeString(`<span class="glyphicon glyphicon-ok" 
+                                            aria-hidden="true" 
+                                            style="color: ${numValueOfDepName(depName)}">
+                                      </span>`);
+        }else{
+          continue;
+        }
+      }
+      return ``;
+    }
   }
 });
 

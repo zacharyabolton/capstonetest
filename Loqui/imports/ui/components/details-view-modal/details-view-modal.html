@@ -25,10 +25,14 @@
             </div>
 
           </div><!-- / .modal-body -->
-          {{#if isUser currentUser}}
+          
+          {{#if isUser currentUser event._id}}
             <div class="modal-footer">
-              <input type="checkbox" name="interested" value="interested">
-              I'm interested in this event!
+              <label>
+                <input type="checkbox" class="interestedCheck" 
+                    {{checkedOrNo currentUser event}}>
+                I'm interested in this event!
+              </label>
             </div>
           {{/if}}
         </div><!-- / #details-view-form -->

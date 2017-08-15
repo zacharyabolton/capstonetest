@@ -24,19 +24,22 @@ Template.list.helpers({
   getYears(){
     var selectedDep = Session.get('selectedDep');
     var eventsIveAdded = Session.get('seeEventsIveAdded');
-    const years = Events.find({ $and: [ selectedDep, upcoming, eventsIveAdded ] },
+    var interestingArray = Session.get('interestingEventsFilter');
+    const years = Events.find({ $and: [ selectedDep, upcoming, eventsIveAdded, interestingArray ] },
       {sort: {start: 1}}).map(event=>moment(event.start).year());
     return _.uniq(years)
   },
   getMonths(year){
     var selectedDep = Session.get('selectedDep');
     var eventsIveAdded = Session.get('seeEventsIveAdded');
+    var interestingArray = Session.get('interestingEventsFilter');
     const months = Events.find(
       { $and: [
         {start: {$gte: new Date(year,0,1), $lt: new Date(year+1,0,1)}},
         selectedDep,
         upcoming,
-        eventsIveAdded
+        eventsIveAdded,
+        interestingArray
         ]},
       {sort: {start: 1}}).map(event=>moment(event.start).month());
     return _.uniq(months); // this returns integers in [0,11]
@@ -44,12 +47,14 @@ Template.list.helpers({
   getEvents(monthNumber,year){
     var selectedDep = Session.get('selectedDep');
     var eventsIveAdded = Session.get('seeEventsIveAdded');
+    var interestingArray = Session.get('interestingEventsFilter');
     return Events.find(
       { $and: [
         {start: {$gte: new Date(year,monthNumber,0,23,59,59), $lt: new Date(year,monthNumber+1,0,23,59,59)}},
         selectedDep,
         upcoming,
-        eventsIveAdded
+        eventsIveAdded,
+        interestingArray
       ]},
       {sort: {start: 1}});
   },

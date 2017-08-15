@@ -14,11 +14,13 @@ let ownerFilter = {};
 Template.calendarsNav.onCreated(function(){
   const instance = this;
   instance.toggleIveAdded = new ReactiveVar(false);
+  instance.toggleInterestedFilter = new ReactiveVar(false);
   let template = Template.instance();
   template.subscribe( 'events' );
   Session.set('selectedDep', depFilter);
   Session.set('seeEventsIveAdded', ownerFilter);
   Session.set('depBtnLabel', 'All Departments');
+  Session.set('interestingEventsFilter', {});
 });
 
 Template.calendarsNav.helpers({
@@ -56,15 +58,32 @@ Template.calendarsNav.events({
     Session.set('selectedDay', {department: "jsTestDepartment"} );
 	},
   'click #iveAdded': function(event, instance){
-    console.log(instance.toggleIveAdded.get());
     instance.toggleIveAdded.set(!instance.toggleIveAdded.get());
     var seeOrNo = instance.toggleIveAdded.get();
     if(seeOrNo){
       document.getElementById("iveAdded").classList.add('active');
       Session.set('seeEventsIveAdded', {owner: Meteor.userId()});
+
+      Session.set('selectedDep', depFilter);
+      Session.set('depBtnLabel', 'All Departments');
     }else{
       document.getElementById("iveAdded").classList.remove('active');
       Session.set('seeEventsIveAdded', ownerFilter);
+    }
+  },
+  'click #interested': function(event, instance){
+    instance.toggleInterestedFilter.set(!instance.toggleInterestedFilter.get());
+    var interestedSeeOrNo = instance.toggleInterestedFilter.get();
+    if(interestedSeeOrNo){
+      document.getElementById("interested").classList.add('active');
+      interestingArray = {_id: {$in: Meteor.user().profile.interested}};
+      Session.set('interestingEventsFilter', interestingArray);
+
+      Session.set('selectedDep', depFilter);
+      Session.set('depBtnLabel', 'All Departments');
+    }else{
+      document.getElementById("interested").classList.remove('active');
+      Session.set('interestingEventsFilter', {});
     }
   }
 });

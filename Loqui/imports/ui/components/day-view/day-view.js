@@ -26,7 +26,9 @@ Template.dayView.helpers({
   },
 	events(){
 		var selectedDay = Session.get('selectedDay');
-		var results = Events.find({ $and: [ selectedDay, Session.get('selectedDep') ] });
+    var eventsIveAdded = Session.get('seeEventsIveAdded');
+    var interestingArray = Session.get('interestingEventsFilter');
+		var results = Events.find({ $and: [ selectedDay, Session.get('selectedDep'), eventsIveAdded, interestingArray ] });
 		return results;
 	},
 	formatTimeRange(start, end) {

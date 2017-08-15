@@ -26,8 +26,10 @@ Template.calendar.onRendered(()=>{
   $('#events-calendar').fullCalendar({
     events: function( start, end, timezone, callback ) {
       var selectedDep = Session.get('selectedDep');
+      var eventsIveAdded = Session.get('seeEventsIveAdded');
+      var interestingArray = Session.get('interestingEventsFilter');
 
-      let data = Events.find(selectedDep).fetch().map( ( event ) => {
+      let data = Events.find({ $and: [selectedDep, eventsIveAdded, interestingArray]}).fetch().map( ( event ) => {
         event.editable = !isPast( event.start );
         return event;
       });

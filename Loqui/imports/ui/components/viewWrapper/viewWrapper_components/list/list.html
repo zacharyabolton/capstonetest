@@ -1,5 +1,13 @@
 <template name="list">
   <ul id="ulShell">
+    <div style="display: initial;" id="noEventMSG">
+      <div>
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        <h6>
+          It looks like there are no events matching your criteria.
+        </h6>
+      </div>
+    </div>
     {{#each year in getYears}}
       <li class="liYear">
         <h2>{{year}}</h2>

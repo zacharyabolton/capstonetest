@@ -1,6 +1,7 @@
 import {Meteor} from 'meteor/meteor';
 import {Template} from 'meteor/templating';
 import {Session} from 'meteor/session';
+import {Tracker} from 'meteor/tracker'
 
 import './oneEvent.html';
 
@@ -38,11 +39,18 @@ Template.oneEvent.helpers({
     var dayName = days[x];
     return dayName;
   },
-  interestedIndicator(event){
+  indicator(event){
+    var depName = event.department;
     if(Meteor.user().profile.contributor){
-      return;
+      if(Meteor.userId() === event.owner){
+        return Spacebars.SafeString(`<span class="glyphicon glyphicon-star" 
+                                          aria-hidden="true" 
+                                          style="color: ${numValueOfDepName(depName)}">
+                                    </span>`);;
+      }else{
+        return ``;
+      }
     }else{
-      var depName = event.department;
       var eventId = event._id;
       var interestedArray = Meteor.user().profile.interested;
       for (var i = interestedArray.length - 1; i >= 0; i--) {
@@ -60,11 +68,28 @@ Template.oneEvent.helpers({
   }
 });
 
-Template.oneEvent.rendered=function(){
-  element = document.getElementsByClassName("ulFinalSubShell");
-  if (element.firstChild) {
-    return;// If it has at least one, do nothing...
+let testForEvents = function(nodes){
+  if(nodes === 0){
+    var elem = document.getElementById('noEventMSG');
+    elem.style.display = "initial";
+  }else if(nodes > 0){
+    var elem = document.getElementById('noEventMSG');
+    elem.style.display = "none";
   }else{
-    console.log("no items!");// Inform user there are no items matching their filters.
-  }
+    nodes = 0;
+  };
 };
+
+Tracker.autorun(() => {
+  var nodes = 0;
+
+  Template.oneEvent.onRendered( () => {
+    nodes++;
+    testForEvents(nodes);
+  });
+
+  Template.oneEvent.onDestroyed( () => {
+    nodes--;
+    testForEvents(nodes);
+  });
+});

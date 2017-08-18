@@ -35,3 +35,12 @@ Template.viewWrapper.events({
   	}
   }
 });
+
+// Template.viewWrapper.rendered=function(){
+//   element = document.getElementById("viewWrapper");
+//   if (element.firstChild) {
+//     console.log(element.firstChild);// If it has at least one, do nothing...
+//   }else{
+//     console.log("no 2nd child!");// Inform user there are no items matching their filters.
+//   }
+// };

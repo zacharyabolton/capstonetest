@@ -51,11 +51,18 @@ Template.calendar.onRendered(()=>{
         }
         return color;
       };
-      let interestedIndicator = function(event){
+      let indicator = function(event){
+        var depName = event.department;
         if(Meteor.user().profile.contributor){
-          return ``;
+          if(Meteor.userId() === event.owner) {
+            return `<span class="glyphicon glyphicon-star" 
+                          aria-hidden="true" 
+                          style="color: ${numValueOfDepName(depName)}">
+                    </span>`;
+          }else{
+            return ``;
+          }
         }else{
-          var depName = event.department;
           var eventId = event._id;
           var interestedArray = Meteor.user().profile.interested;
           for (var i = interestedArray.length - 1; i >= 0; i--) {
@@ -70,9 +77,9 @@ Template.calendar.onRendered(()=>{
           }
           return ``;
         }
-      }
+      };
       element.find( '.fc-content' ).html(//Event token html injection
-        ` <h4>${ interestedIndicator(event) } ${ event.title }</h4>
+        ` <h4>${ indicator(event) } ${ event.title }</h4>
           <hr class=" depIndicator 
                       ${event.department}
                     " 

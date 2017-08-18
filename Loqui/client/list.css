@@ -1,3 +1,14 @@
+#noEventMSG div{
+	padding-top: 8rem;
+	padding-bottom: 10rem;
+	text-align: center;
+	color: #495777;
+}
+
+#noEventMSG div span{
+	font-size: 4rem;
+}
+
 #ulShell{
 	padding-top: 0;
 	margin-top: 0;
@@ -44,6 +55,10 @@
 	margin-bottom: 0.2rem;
 	background-color: rgba(178,136,101,0.1);
 	background-image: linear-gradient(to top, rgba(178,136,101,0), rgba(178,136,101,0.1) 100%);
+}
+
+.liEvent h4 span{
+	text-shadow: 0.1rem 0.1rem 0.2rem #B28865;
 }
 
 .liEvent:hover{

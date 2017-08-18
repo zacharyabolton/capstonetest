@@ -36,6 +36,10 @@ div.fc-day-grid.fc-unselectable{
   white-space: normal;
 }
 
+.fc-content h4 span{
+  text-shadow: 0.1rem 0.1rem 0.1rem #807f80;
+}
+
 /*--------Start media queries----------*/
 
 @media only screen and (max-width: 450px){ /* mobile phone */

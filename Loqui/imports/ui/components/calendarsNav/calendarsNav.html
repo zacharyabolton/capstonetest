@@ -2,20 +2,20 @@
 		<div id="calendarsNav" class="container">
 			<div class="dropdown calDBselect col-xs-6">
 			  <button class="btn btn-default dropdown-toggle col-xs-12" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-			    <span class="glyphicon glyphicon-calendar"></span> {{depBtnLabel}}
+			    {{depBtnLabel}}
 			    <span class="caret"></span>
 			  </button>
 			  <ul id="dropdown-menu" class="dropdown-menu col-xs-12" aria-labelledby="dropdownMenu1">
 			  	<li id="allDeps">All</li>
 			  	{{#each distinctDepartments}}
-			    	<li class="departmentDropDownItem">{{this}}<!--  <span class="pull-right">({{departmentCount}})</span> --></li>
+			    	<li class="departmentDropDownItem">{{this}}</li>
 			    {{/each}}
 			  </ul>
 			</div>
 			{{#if currentUser.profile.contributor}}
 			<div class="calDBselect col-xs-6">
 			  <button class="btn btn-default col-xs-12" type="button" id="iveAdded">
-			    I've added <span class="glyphicon glyphicon-star-empty"></span>
+			    <span class="glyphicon glyphicon-star"></span> I've added
 			  </button>
 			</div>
 			{{else}}

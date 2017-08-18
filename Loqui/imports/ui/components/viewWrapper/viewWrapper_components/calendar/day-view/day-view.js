@@ -39,11 +39,18 @@ Template.dayView.helpers({
     var timeRange = startTime+" to "+endTime;
     return timeRange;
   },
-  interestedIndicator(department, _id){
+  indicator(department, _id, owner){
+    var depName = department;
     if(Meteor.user().profile.contributor){
-      return;
+      if(Meteor.userId() === owner) {
+        return Spacebars.SafeString(`<span class="glyphicon glyphicon-star" 
+                                          aria-hidden="true" 
+                                          style="color: ${numValueOfDepName(depName)}">
+                                    </span>`);
+      }else{
+        return ``;
+      }
     }else{
-      depName = department;
       var interestedArray = Meteor.user().profile.interested;
       for (var i = interestedArray.length - 1; i >= 0; i--) {
         if(interestedArray[i] === _id){

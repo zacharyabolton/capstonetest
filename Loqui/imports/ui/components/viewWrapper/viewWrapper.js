@@ -7,6 +7,35 @@ import './viewWrapper.html';
 import './viewWrapper_components/calendar/calendar.js';
 import './viewWrapper_components/list/list.js';
 
+Template.viewWrapper.onRendered(()=>{
+  let institutionPrompt = function(contributor, institution){
+    if(contributor){
+      if(institution){
+        return;
+      }else{
+        var institution = prompt("Enter the institution's name you are publishing for.","");
+        if (institution == null || institution == ''){
+          alert("You must be affiliated with an official institution in order to be a contributor.");
+          institutionPrompt(contributor, institution);
+        }else{
+          Meteor.call('addInstitution', institution);
+          return;
+        }
+      }
+    }else{
+      return;
+    }
+  }
+  if(Meteor.user()){
+    contributor = Meteor.user().profile.contributor;
+    institution = Meteor.user().profile.institution;
+    institutionPrompt(contributor, institution);
+  }else{
+    return;
+  }
+})
+
+
 Template.viewWrapper.onCreated(function() {
   const instance = this;
   instance.toggleDisplay = new ReactiveVar(true);

@@ -62,12 +62,14 @@ Template.calendarsNav.events({
     var seeOrNo = instance.toggleIveAdded.get();
     if(seeOrNo){
       document.getElementById("iveAdded").classList.add('active');
+      document.getElementById("iveAdded").setAttribute("style", "background-color:rgba(172,187,187,1);");
       Session.set('seeEventsIveAdded', {owner: Meteor.userId()});
 
       Session.set('selectedDep', depFilter);
       Session.set('depBtnLabel', 'All Departments');
     }else{
       document.getElementById("iveAdded").classList.remove('active');
+      document.getElementById("iveAdded").setAttribute("style", "background-color:none;");
       Session.set('seeEventsIveAdded', ownerFilter);
     }
   },
@@ -76,6 +78,7 @@ Template.calendarsNav.events({
     var interestedSeeOrNo = instance.toggleInterestedFilter.get();
     if(interestedSeeOrNo){
       document.getElementById("interested").classList.add('active');
+      document.getElementById("interested").setAttribute("style", "background-color:rgba(172,187,187,1);");
       interestingArray = {_id: {$in: Meteor.user().profile.interested}};
       Session.set('interestingEventsFilter', interestingArray);
 
@@ -83,6 +86,7 @@ Template.calendarsNav.events({
       Session.set('depBtnLabel', 'All Departments');
     }else{
       document.getElementById("interested").classList.remove('active');
+      document.getElementById("interested").setAttribute("style", "background-color:none;");
       Session.set('interestingEventsFilter', {});
     }
   }

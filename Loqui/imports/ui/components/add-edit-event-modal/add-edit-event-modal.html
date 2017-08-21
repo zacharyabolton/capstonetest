@@ -11,13 +11,22 @@
         <div class="modal-body"> <!-- input -->
 
           <div class="form-group">
-            <label for="title">Event Title</label>
+            <input type="text" name="institution" class="form-control" value="{{currentUser.profile.institution}}" readonly="true">
+          </div>
+
+          <div class="form-group">
+            <label for="title">Title</label>
             <input type="text" name="title" class="form-control" value="{{event.title}}">
           </div>
 
           <div class="form-group">
             <label for="department">Department</label>
             <input type="text" name="department" class="form-control" value="{{event.department}}">
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea rows="10" name="description" class="form-control" value="{{event.description}}"></textarea>
           </div>
 
           <div class="form-group">
@@ -31,6 +40,11 @@
                 <span class="input-group-addon">to</span>
                 <input type="text" class="set-due-date form-control" name="end" value="{{#if event.end}}{{event.end}}{{else}}{{event.start}}{{/if}}"/>
             </div>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" name="location" class="form-control" value="{{event.location}}">
           </div>
 
         </div> <!-- / input -->

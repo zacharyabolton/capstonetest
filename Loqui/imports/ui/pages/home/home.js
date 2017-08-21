@@ -1,3 +1,6 @@
+import {Template} from 'meteor/templating';
+import {Meteor} from 'meteor/meteor';
+
 import './home.html';
 
 import '../../components/navbar/navbar.js';

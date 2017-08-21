@@ -36,6 +36,18 @@ let EventsSchema = new SimpleSchema({
   'owner': {
     type: String,
     label: 'userId'
+  },
+  'description': {
+    type: String,
+    label: 'Description'
+  },
+  'institution': {
+    type: String,
+    label: 'Institution'
+  },
+  'location': {
+    type: String,
+    label: 'Location'
   }
 });
 

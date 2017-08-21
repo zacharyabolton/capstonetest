@@ -65,17 +65,21 @@ Template.calendar.onRendered(()=>{
         }else{
           var eventId = event._id;
           var interestedArray = Meteor.user().profile.interested;
-          for (var i = interestedArray.length - 1; i >= 0; i--) {
-            if(interestedArray[i] === eventId){
-              return `<span class="glyphicon glyphicon-ok" 
-                            aria-hidden="true" 
-                            style="color: ${numValueOfDepName(depName)}">
-                      </span>`;
-            }else{
-              continue;
+          if(interestedArray){
+            for (var i = interestedArray.length - 1; i >= 0; i--) {
+              if(interestedArray[i] === eventId){
+                return `<span class="glyphicon glyphicon-ok" 
+                              aria-hidden="true" 
+                              style="color: ${numValueOfDepName(depName)}">
+                        </span>`;
+              }else{
+                continue;
+              }
             }
+            return ``;
+          }else{
+            return ``;
           }
-          return ``;
         }
       };
       element.find( '.fc-content' ).html(//Event token html injection

@@ -11,7 +11,10 @@ Meteor.methods({
       start: Date,
       end: Date,
       department: String,
-      owner: String
+      owner: String,
+      description: String,
+      institution: String,
+      location: String
     });
 
     try {

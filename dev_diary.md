@@ -113,3 +113,7 @@
 08-10-17
 
 	Implemented Details view and matching contributor id with event clicked to check if can edit or if user. Need to implement "interested" next and style the details modal.
+
+08-21-17
+
+	Completed form fields although I still need to figure out time of day for events and if I want to make the location form fields more specific. Next steps are time of day and filtering by institution if I want that. Also, UTC time vs. BR time... After that I am done with V. 1.0 i guess...

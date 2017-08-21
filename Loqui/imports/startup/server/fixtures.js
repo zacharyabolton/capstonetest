@@ -12,140 +12,200 @@ Meteor.startup(() => {
         end: "2017-08-23T21:00:00.000Z", 
         editable: true, 
         department: 'Art History',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'Universidade Federal Juiz de Fora',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'Chem Congress', 
         start: "2017-09-07T22:00:00.000Z", 
         end: "2017-09-07T22:30:00.000Z", 
         editable: false, 
         department: 'Chemistry',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'Periodic University of Elements',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'The biology of Octopi', 
         start: "2017-10-01T10:00:00.000Z", 
         end: "2017-10-01T20:00:00.000Z", 
         editable: false, 
-        department: 'Biology',
-        owner: 'system'
+        department: 'Furman University',
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'hogwarts',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'Periodic Congress', 
         start: "2018-01-08T10:00:00.000Z", 
         end: "2018-01-08T15:30:00.000Z", 
         editable: false, 
         department: 'Chemistry',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'Periodic University of Elements',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'WWI', 
         start: "2016-11-30T20:00:00.000Z", 
         end: "2016-11-30T22:00:00.000Z", 
         editable: false, 
         department: 'History',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'Some random University',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'Capitalism 101', 
         start: "2017-09-04T20:00:00.000Z", 
         end: "2017-09-04T21:00:00.000Z", 
         editable: true, 
         department: 'Econ',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'University of Wall St.',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'Contemporary Nudes', 
         start: "2017-12-27T10:00:00.000Z", 
         end: "2017-12-27T12:30:00.000Z", 
         editable: true, 
         department: 'Art History',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'University of Modern Art in Someplace',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'Baking soda volcanos', 
         start: "2017-10-01T11:00:00.000Z", 
         end: "2017-10-01T16:45:00.000Z", 
         editable: false, 
         department: 'Chemistry',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'College of Natural Disasters',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'Hedge Funds for dummies', 
         start: "2017-10-20T20:00:00.000Z", 
         end: "2017-10-20T20:45:00.000Z", 
         editable: false, 
         department: 'Econ',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'University of Market Collapse',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'George Bellows', 
         start: "2017-08-10T20:00:00.000Z", 
         end: "2017-08-10T21:00:00.000Z", 
         editable: true, 
         department: 'Art History',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'Monteiro U in JF',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'Maple Syrup Studies', 
         start: "2017-11-11T12:00:00.000Z", 
         end: "2017-11-11T13:00:00.000Z", 
         editable: true, 
         department: 'Canadian Studies',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'University of Toronto',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'The History of Submarines', 
         start: "2017-09-02T10:00:00.000Z", 
         end: "2017-09-02T20:00:00.000Z", 
         editable: false, 
         department: 'History',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'West Point',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'The biology of Platupi', 
         start: "2017-08-01T21:00:00.000Z", 
         end: "2017-08-01T22:00:00.000Z", 
         editable: false, 
         department: 'Biology',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'Darwin College and University in the Galápagos',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'Explosions', 
         start: "2018-04-10T14:00:00.000Z", 
         end: "2018-04-10T20:30:00.000Z", 
         editable: false, 
         department: 'Chemistry',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'Hogwarts',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'WWII', 
         start: "2017-12-30T10:00:00.000Z", 
         end: "2017-12-30T20:00:00.000Z", 
         editable: false, 
         department: 'History',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'West Point',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'Marxism 101', 
         start: "2017-11-27T10:00:00.000Z", 
         end: "2017-11-27T18:00:00.000Z", 
         editable: true, 
         department: 'Econ',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'The People\'s University',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'Limits', 
         start: "2017-08-27T20:00:00.000Z", 
         end: "2017-08-27T22:00:00.000Z", 
         editable: true, 
         department: 'Mathematics',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'Massachusettes Institute of Technology',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'Javascript For the Masses', 
         start: "2017-09-01T21:00:00.000Z", 
         end: "2017-09-01T21:30:00.000Z", 
         editable: false, 
         department: 'Computer Science',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'Goldsmiths Univeristy of London',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'Meteor', 
         start: "2017-08-23T10:00:00.000Z", 
         end: "2017-08-23T11:00:00.000Z", 
         editable: false, 
         department: 'Computer Science',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'Goldsmiths Univeristy of London',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'Monet', 
         start: "2019-08-10T19:00:00.000Z", 
         end: "2019-08-10T20:15:00.000Z", 
         editable: true, 
         department: 'Art History',
-        owner: 'system'
+        owner: 'system',
+        description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
+        institution: 'Some Fantastic University',
+        location: '934 Somewhere Ln, Black Forest, UK 30000'
       }
     ];
 

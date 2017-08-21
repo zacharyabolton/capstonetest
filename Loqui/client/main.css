@@ -191,6 +191,14 @@ div#viewWrapper.container.well{
 
 /*--------END viewWrapper--------------*/
 
+/*--------add-edit-event-modal--------------*/
+
+textarea {
+    resize: none;
+}
+
+/*--------END add-edit-event-modal--------------*/
+
 /*--------Start media queries----------*/
 
 @media only screen and (max-width: 575px){ /* xtra small */

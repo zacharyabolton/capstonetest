@@ -4,11 +4,15 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h3 class="modal-title" id="details-view">{{event.title}}</h3>
+          <h2 class="modal-title" id="details-view">{{event.title}}</h2>
         </div> <!-- /modal-header -->
 
         <div id="details-view-form">
           <div class="modal-body">
+
+            <div> 
+              <h3>{{event.institution}}</h3>
+            </div>
 
             <div>
               <div>
@@ -22,6 +26,14 @@
 
             <div> 
               <span>Department: </span><h4>{{event.department}}</h4>
+            </div>
+
+            <div> 
+              <p>{{event.description}}</p>
+            </div>
+
+            <div> 
+              <h6>{{event.location}}</h6>
             </div>
 
           </div><!-- / .modal-body -->

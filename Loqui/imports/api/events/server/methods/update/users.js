@@ -5,10 +5,13 @@ import { Match } from 'meteor/check';
 //import { Events } from '../../../events.js';
 
 Meteor.methods({
-  'addInterested'( interestingEvent ) {
+  'addInterested'(interestingEvent) {
     Meteor.users.update({_id:Meteor.user()._id}, { $push: {"profile.interested": interestingEvent} });
   },
-  'removeInterested'( interestingEvent ) {
+  'removeInterested'(interestingEvent) {
     Meteor.users.update({_id:Meteor.user()._id}, { $pull: {"profile.interested": interestingEvent} });
+  },
+  'addInstitution'(institution) {
+  	Meteor.users.update({_id:Meteor.user()._id}, { $set: {"profile.institution":institution} });
   }
 });

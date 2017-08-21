@@ -40,13 +40,17 @@ Template.detailsViewModal.helpers({
   },
   checkedOrNo(currentUser, event){
     var interestedArray = currentUser.profile.interested;
-    var thisId = event && event._id;
-    for (var i = interestedArray.length - 1; i >= 0; i--) {
-      if(interestedArray[i] === thisId){
-        return "checked";
-      }else{
-        continue;
+    if(interestedArray){
+      var thisId = event && event._id;
+      for (var i = interestedArray.length - 1; i >= 0; i--) {
+        if(interestedArray[i] === thisId){
+          return "checked";
+        }else{
+          continue;
+        }
+        return "";
       }
+    }else{
       return "";
     }
   }

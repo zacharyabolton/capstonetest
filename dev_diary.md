@@ -117,3 +117,7 @@
 08-21-17
 
 	Completed form fields although I still need to figure out time of day for events and if I want to make the location form fields more specific. Next steps are time of day and filtering by institution if I want that. Also, UTC time vs. BR time... After that I am done with V. 1.0 i guess...
+
+08-23-17
+
+	Implemented institution filter.

@@ -25,8 +25,9 @@ Template.calendar.onRendered(()=>{
       var selectedDep = Session.get('selectedDep');
       var eventsIveAdded = Session.get('seeEventsIveAdded');
       var interestingArray = Session.get('interestingEventsFilter');
+      var filterByInstitution = Session.get('institution');
 
-      let data = Events.find({ $and: [selectedDep, eventsIveAdded, interestingArray]}).fetch().map( ( event ) => {
+      let data = Events.find({ $and: [selectedDep, eventsIveAdded, interestingArray, filterByInstitution]}).fetch().map( ( event ) => {
         event.editable = !isPast( event.start );
         return event;
       });

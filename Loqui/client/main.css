@@ -80,6 +80,19 @@ div.container-fluid{
 
 /*--------END navbar--------------*/
 
+/*--------viewWrapper--------------*/
+
+#viewBtn{
+	font-size: 1.25rem;
+}
+
+#instituteFilter{
+	margin: 1.2rem;
+	color: grey;
+}
+
+/*--------END viewWrapper--------------*/
+
 /*------------calendarsNav--------------*/
 
 /*#calendarsNav{

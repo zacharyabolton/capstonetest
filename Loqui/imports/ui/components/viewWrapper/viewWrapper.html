@@ -1,6 +1,7 @@
 <template name="viewWrapper">
 	<div id="viewWrapper" class="container well">
 		<button id="viewBtn">{{calOrList}}</button>
+		<p id="instituteFilter">{{filteringByInstitution}}</p>
 		{{#if toggleDisplay}}
 			{{> calendar}}
 		{{else}}

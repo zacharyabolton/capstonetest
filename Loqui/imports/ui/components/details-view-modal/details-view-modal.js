@@ -64,5 +64,14 @@ Template.detailsViewModal.events({
       }else{
         Meteor.call('removeInterested', interestingEvent);
       }
+  },
+  'click .uSelect': function(event){
+    closeModal();
+    var onCal = Blaze.getView($('#events-calendar')[0]);
+    if(onCal.name === "Template.calendar"){
+      $('#viewBtn').click();
+    };
+    var thisInstitution = event.target.innerHTML;
+    Session.set('institution', {institution: thisInstitution});
   }
 });

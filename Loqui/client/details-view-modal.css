@@ -14,6 +14,10 @@
 	margin-top: 0rem;
 }
 
+.modal-body div h6{
+	margin-top: 3rem;
+}
+
 .modal-footer{
 	color: #B28865;
 }

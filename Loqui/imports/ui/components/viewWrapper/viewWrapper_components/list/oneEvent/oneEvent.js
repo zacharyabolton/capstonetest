@@ -80,7 +80,7 @@ let testForEvents = function(nodes){
   };
 };
 
-Tracker.autorun(() => {
+Tracker.autorun(() => {//for "no events" view
   var nodes = 0;
 
   Template.oneEvent.onRendered( () => {

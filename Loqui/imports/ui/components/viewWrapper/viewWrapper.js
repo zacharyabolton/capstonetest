@@ -39,7 +39,8 @@ Template.viewWrapper.onRendered(()=>{
 Template.viewWrapper.onCreated(function() {
   const instance = this;
   instance.toggleDisplay = new ReactiveVar(true);
-  instance.calOrList = new ReactiveVar("Switch to list view");
+  instance.calOrList = new ReactiveVar("List");
+  Session.set('institution', {});
 });
 
 Template.viewWrapper.helpers({
@@ -50,6 +51,15 @@ Template.viewWrapper.helpers({
   calOrList() {
   	const instance = Template.instance();
   	return instance.calOrList.get();
+  },
+  filteringByInstitution(){
+    var isFiltering = Session.get('institution');
+    var filteringInstitution = isFiltering.institution;
+    if(filteringInstitution){
+      return Spacebars.SafeString(`<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> `+filteringInstitution);
+    }else{
+      return ``;
+    }
   }
 });
 
@@ -58,18 +68,12 @@ Template.viewWrapper.events({
 	  instance.toggleDisplay.set(!instance.toggleDisplay.get());
 	  var calView = instance.toggleDisplay.get();
 	  if(calView === true){
-	  	instance.calOrList.set("Switch to list view");
+	  	instance.calOrList.set("List");
 	  }else{
-	  	instance.calOrList.set("Switch to calendar view");
+	  	instance.calOrList.set("Calendar");
   	}
+  },
+  "click #instituteFilter": function(){
+    Session.set('institution', {});
   }
 });
-
-// Template.viewWrapper.rendered=function(){
-//   element = document.getElementById("viewWrapper");
-//   if (element.firstChild) {
-//     console.log(element.firstChild);// If it has at least one, do nothing...
-//   }else{
-//     console.log("no 2nd child!");// Inform user there are no items matching their filters.
-//   }
-// };

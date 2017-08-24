@@ -121,3 +121,5 @@
 08-23-17
 
 	Implemented institution filter.
+
+	Added time picker elements. Just HTML / no JS.

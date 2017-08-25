@@ -33,12 +33,6 @@ Template.dayView.helpers({
 		var results = Events.find({ $and: [ selectedDay, Session.get('selectedDep'), eventsIveAdded, interestingArray ] });
 		return results;
 	},
-	formatTimeRange(start, end) {
-    var startTime = moment(start).format("h:mm a");
-    var endTime = moment(end).format("h:mm a");
-    var timeRange = startTime+" to "+endTime;
-    return timeRange;
-  },
   indicator(department, _id, owner){
     var depName = department;
     if(Meteor.user().profile.contributor){

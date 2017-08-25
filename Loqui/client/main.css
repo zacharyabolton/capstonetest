@@ -95,13 +95,6 @@ div.container-fluid{
 
 /*------------calendarsNav--------------*/
 
-/*#calendarsNav{
-
-	overflow: auto;
-	white-space: nowrap;
-
-}*/
-
 .calDBselect{
 	margin-bottom: 1.2rem;
 	margin-left: 0rem;
@@ -173,19 +166,12 @@ button#iveAdded.btn.btn-default.col-xs-12:hover{
 
 /*------------viewWrapper--------------*/
 
-#viewWrapper{
-	/* CAN BE DELETED: for prototyping only */
-
-	/* END CAN BE DELETED*/
-
-}
-
 #viewBtn{
 	width: 100%;
 	margin-bottom: 0;
 	border: none;
 	background-color: rgba(212,191,151,1);
-	background-image: linear-gradient(to left, rgba(247,224,205,1), rgba(212,191,151,1), rgba(247,224,205,1) 100%);
+	background-image: linear-gradient(to left, #f5f5f5, rgba(212,191,151,1), #f5f5f5 100%);
 	color: #777777;
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
@@ -196,7 +182,6 @@ button#iveAdded.btn.btn-default.col-xs-12:hover{
 }
 
 div#viewWrapper.container.well{
-	background-color: rgba(247,224,205,1);
 	border:none;
 	box-shadow: none;
 	border-radius: 0px;

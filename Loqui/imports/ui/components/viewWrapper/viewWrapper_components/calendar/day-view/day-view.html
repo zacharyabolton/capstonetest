@@ -1,11 +1,23 @@
 <template name="dayView">
   <div class="mobileDayView">
     <h2 class="dayHeader">{{dayHeader}}</h2>
+    <hr>
     <ul class="ulFinalSubShell">
       {{#each events}}
         <li class="liEvent">
-          <h4 class="divEvent">{{indicator department _id owner}} {{title}}</h4>
-          <div>{{formatTimeRange start end}}<span class="spanDep pull-right">{{department}}</span></div>
+          <li class="liEvent row">
+              <div class="divEvent col-xs-12">
+                  {{indicator department _id owner}} {{title}}
+              </div>
+              <div class="col-xs-12 oneEventMetaInfoFooter">
+                <div class="col-xs-8">
+                  {{institution}}
+                </div>
+                <div class="spanDep text-right col-xs-4">
+                  {{department}}
+                </div>
+              </div>
+          </li>
         </li>
       {{/each}}
     </ul>

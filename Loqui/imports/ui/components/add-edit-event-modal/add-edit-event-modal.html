@@ -46,7 +46,7 @@
             <span> times</span>
             <div class="input-timerange input-group col-xs-12" id="timepicker">
               <div type="text" class="set-due-time col-xs-12 col-sm-5" name="startTime" value="{{event.start}}">
-                <select class="col-xs-4">
+                <select name="startHour" class="col-xs-4">
                   <option value="01">01</option>
                   <option value="02">02</option>
                   <option value="03">03</option>
@@ -60,20 +60,20 @@
                   <option value="11">11</option>
                   <option value="12">12</option>
                 </select>
-                <select class="col-xs-4">
+                <select name="startMinute" class="col-xs-4">
                   <option value="00">00</option>
                   <option value="15">15</option>
                   <option value="30">30</option>
                   <option value="45">45</option>
                 </select>
-                <select class="col-xs-4">
+                <select name="startAMPM" class="col-xs-4">
                   <option value="AM">AM</option>
                   <option value="PM">PM</option>
                 </select>
               </div>
               <span class="col-xs-12 col-sm-2">to</span>
               <div type="text" class="set-due-time col-xs-12 col-sm-5" name="endTime" value="{{#if event.end}}{{event.end}}{{else}}{{event.start}}{{/if}}">
-                <select class="col-xs-4">
+                <select name="endHour" class="col-xs-4">
                   <option value="01">01</option>
                   <option value="02">02</option>
                   <option value="03">03</option>
@@ -87,13 +87,13 @@
                   <option value="11">11</option>
                   <option value="12">12</option>
                 </select>
-                <select class="col-xs-4">
+                <select name="endMinute" class="col-xs-4">
                   <option value="00">00</option>
                   <option value="15">15</option>
                   <option value="30">30</option>
                   <option value="45">45</option>
                 </select>
-                <select class="col-xs-4">
+                <select name="endAMPM" class="col-xs-4">
                   <option value="AM">AM</option>
                   <option value="PM">PM</option>
                 </select>

@@ -1,6 +1,20 @@
-<template name="oneEvent">
-	<li class="liEvent">
-    <h4 class="divEvent">{{indicator event}} {{event.title}}</h4>
-    <div>{{dayOfWeek event.start}} the {{formatDate event.start}}<span class="spanDep pull-right">{{event.department}}</span></div>
+ <template name="oneEvent">
+	<li class="liEvent row">
+		<div class="oneEventDate col-xs-2 text-left">
+			{{dayOfWeek event.start}} {{formatDate event.start}}
+		</div>
+		<div class="col-xs-10">
+	    <div class="divEvent col-xs-12">
+	    		{{indicator event}} {{event.title}}
+	    </div>
+	    <div class="col-xs-12 oneEventMetaInfoFooter">
+	    	<div class="col-xs-8">
+	    		{{event.institution}}
+	    	</div>
+	    	<div class="spanDep text-right col-xs-4">
+	    		{{event.department}}
+	    	</div>
+	    </div>
+	  </div>
   </li>
 </template>

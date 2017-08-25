@@ -52,17 +52,30 @@ Template.addEditEventModal.helpers({
 Template.addEditEventModal.events({
   'submit form' ( event, template ) {
     event.preventDefault();
-
+    let dateAndTime = function(date, hour, minute, ampm){
+      var dateAndTime = date+' '+hour+':'+minute+' '+ampm;
+      return new Date(dateAndTime);
+    };
     let eventModal = Session.get( 'eventModal' ),
         submitType = eventModal.type === 'edit' ? 'editEvent' : 'addEvent',
         eventItem  = {
           title: template.find( '[name="title"]' ).value,
-          start: new Date(template.find( '[name="start"]' ).value),
-          end: new Date(template.find( '[name="end"]' ).value),
+          start: dateAndTime(
+              template.find( '[name="startDate"]' ).value,
+              template.find( '[name="startHour"]' ).value,
+              template.find( '[name="startMinute"]' ).value,
+              template.find( '[name="startAMPM"]' ).value
+            ),
+          end: dateAndTime(
+              template.find( '[name="endDate"]' ).value,
+              template.find( '[name="endHour"]' ).value,
+              template.find( '[name="endMinute"]' ).value,
+              template.find( '[name="endAMPM"]' ).value
+            ),
           department: template.find( '[name="department"]' ).value,
           owner: Meteor.userId(),
           description: template.find( '[name="description"]' ).value,
-          institution: template.find( '[name="institution"]' ).innerHTML,
+          institution: Meteor.user().profile.institution,//template.find( '[name="institution"]' ).innerHTML,
           location: template.find( '[name="location"]' ).value
         };
     if ( submitType === 'editEvent' ) {

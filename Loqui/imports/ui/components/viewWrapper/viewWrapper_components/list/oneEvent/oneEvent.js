@@ -30,7 +30,7 @@ Template.oneEvent.events({
 
 Template.oneEvent.helpers({
   formatDate(start) {
-    var dayNumber = moment(start).format("Do");
+    var dayNumber = moment(start).format("DD");
     return dayNumber;
   },
   dayOfWeek(start) {

@@ -31,11 +31,11 @@ Template.detailsViewModal.helpers({
     }
   },
   formatStart(start){
-    start = moment(start).format("MMMM Do, YYYY");
+    start = moment(start).format("MMMM Do, YYYY @ h:mm a");
     return start;
   },
   formatEnd(end){
-    end = moment(end).format("MMMM Do, YYYY");
+    end = moment(end).format("MMMM Do @ h:mm a");
     return end;
   },
   checkedOrNo(currentUser, event){

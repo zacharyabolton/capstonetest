@@ -12,7 +12,6 @@ div.fc-day-grid.fc-unselectable{
   list-style-type: none;
   color: rgba( 61,107,107,1);
   font-size: 2rem;
-  text-shadow: 0.1rem 0.1rem 0.3rem rgba( 61,107,107,0.75);
 }
 
 /*END My added styles*/

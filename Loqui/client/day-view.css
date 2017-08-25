@@ -1,9 +1,16 @@
 .dayHeader{
-	padding-left: 1rem;
+	text-align: center;
 	list-style-type: none;
-	background-color: rgba( 82,136, 82,1);
-	background-image: linear-gradient(to left, rgba(247,224,205,1), rgba(185,189,199,1) 100%);
 	color: grey;
+}
+
+.mobileDayView hr{
+	display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: none;
+  padding: 0; 
 }
 
 @media only screen and (min-width: 576px){

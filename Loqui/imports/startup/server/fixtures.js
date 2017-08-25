@@ -54,7 +54,7 @@ Meteor.startup(() => {
         department: 'History',
         owner: 'system',
         description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
-        institution: 'Some random University',
+        institution: 'Some Random University',
         location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'Capitalism 101', 
@@ -184,7 +184,7 @@ Meteor.startup(() => {
         department: 'Computer Science',
         owner: 'system',
         description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
-        institution: 'Goldsmiths Univeristy of London',
+        institution: 'Goldsmiths University of London',
         location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'Meteor', 
@@ -194,7 +194,7 @@ Meteor.startup(() => {
         department: 'Computer Science',
         owner: 'system',
         description: 'Nam auctor ipsum quam, quis scelerisque nisl aliquam eget. Fusce id leo vestibulum dolor dictum euismod. Vestibulum sagittis tempus ex. Fusce volutpat velit nulla, vitae vulputate ligula faucibus at. In a aliquet tellus. Fusce sed nibh quis elit placerat molestie. Maecenas quis est vitae felis pharetra condimentum. Proin auctor tellus a tellus varius, sed tristique nunc venenatis.',
-        institution: 'Goldsmiths Univeristy of London',
+        institution: 'Goldsmiths University of London',
         location: '934 Somewhere Ln, Black Forest, UK 30000'
       },
       { title: 'Monet', 

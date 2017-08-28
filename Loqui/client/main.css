@@ -73,7 +73,7 @@ nav.navbar.navbar-default{
 
 .navbar-brand{
 	font-weight: 900;
-	font-family: monospace;
+	font-family: "PT Mono", monospace;
 }
 
 .navbar-btn:hover{

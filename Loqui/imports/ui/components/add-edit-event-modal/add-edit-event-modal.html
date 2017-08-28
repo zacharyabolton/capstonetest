@@ -33,9 +33,9 @@
             <span> dates</span>
             <div class="input-daterange input-group" id="datepicker">
 
-                <input type="text" class="set-due-date form-control" name="startDate" value="{{event.start}}"/>
+                <input type="text" class="set-due-date form-control" name="startDate" value="{{pullStart event}}"/>
                 <span class="input-group-addon">to</span>
-                <input type="text" class="set-due-date form-control" name="endDate" value="{{#if event.end}}{{event.end}}{{else}}{{event.start}}{{/if}}"/>
+                <input type="text" class="set-due-date form-control" name="endDate" value="{{pullEnd event}}"/>
             </div>
           </div>
 

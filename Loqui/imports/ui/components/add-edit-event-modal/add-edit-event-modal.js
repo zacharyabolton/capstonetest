@@ -14,7 +14,8 @@ let closeModal = () => {
 Template.addEditEventModal.onRendered(function() {
     $('.input-daterange').datepicker({
       autoclose: true,
-      todayHighlight: true
+      todayHighlight: true,
+      startDate: new Date()
     });
 });
 
@@ -45,6 +46,20 @@ Template.addEditEventModal.helpers({
         start: eventModal.date,
         end: eventModal.date
       };
+    }
+  },
+  pullStart(event){
+    if(event){
+      return moment(event.start).format('L');
+    }else{
+      return;
+    }
+  },
+  pullEnd(event){
+    if(event){
+      return moment(event.end).format('L');
+    }else{
+      return
     }
   }
 });
@@ -79,7 +94,7 @@ Template.addEditEventModal.events({
           location: template.find( '[name="location"]' ).value
         };
     if ( submitType === 'editEvent' ) {
-      eventItem._id   = eventModal.event;
+      eventItem._id = eventModal.event;
     }
 
     Meteor.call( submitType, eventItem, ( error ) => {

@@ -52,18 +52,22 @@ Template.oneEvent.helpers({
       }
     }else{
       var eventId = event._id;
-      var interestedArray = Meteor.user().profile.interested;
-      for (var i = interestedArray.length - 1; i >= 0; i--) {
-        if(interestedArray[i] === eventId){
-          return Spacebars.SafeString(`<span class="glyphicon glyphicon-ok" 
-                                            aria-hidden="true" 
-                                            style="color: ${numValueOfDepName(depName)}">
-                                      </span>`);
-        }else{
-          continue;
+      if(Meteor.user().profile.interested){
+        var interestedArray = Meteor.user().profile.interested;
+        for (var i = interestedArray.length - 1; i >= 0; i--) {
+          if(interestedArray[i] === eventId){
+            return Spacebars.SafeString(`<span class="glyphicon glyphicon-ok" 
+                                              aria-hidden="true" 
+                                              style="color: ${numValueOfDepName(depName)}">
+                                        </span>`);
+          }else{
+            continue;
+          }
         }
+        return ``;
+      }else{
+        return ``;
       }
-      return ``;
     }
   }
 });

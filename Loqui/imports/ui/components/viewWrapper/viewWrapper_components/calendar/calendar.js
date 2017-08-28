@@ -38,7 +38,7 @@ Template.calendar.onRendered(()=>{
         callback( data );
       }
     },
-    timezone: "America/Sao_Paulo",
+    timezone: "UTC",
     height: "auto",
     //update our initialization of FullCalendar to customize event styles
     eventRender: function( event, element ) {

@@ -1,10 +1,11 @@
 <template name="welcome">
-	<h1 id="welcomeToLoqui">Welcome to Loqui!</h1>
+	<h1 id="welcomeToLoqui">Welcome to <span style="font-family: monospace; font-size: 2.6rem;">Loqui</span></h1>
+	<p class="welcomeBlurb">Your go to place to find congresses from all major instituions!</p>
 	<p id="welcomeAccess">Sign in or join for access.</p>
 	<div class="container well">
 		<div class="row">
-			<div class="col-xs-8 col-xs-offset-2">
-				<video width="100%" height="auto" autoplay="true">
+			<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+				<video width="100%" height="auto" autoplay="true" loop="true">
 				  <source src="welcomevideo.mp4" type="video/mp4">
 				  <!-- <source src="movie.ogg" type="video/ogg"> -->
 				Your browser does not support the video tag.
@@ -12,5 +13,4 @@
 			</div>
 		</div>
 	</div>
-	<!-- <iframe src="../../../../public/Welcome_Video.mov"></iframe> -->
 </template>

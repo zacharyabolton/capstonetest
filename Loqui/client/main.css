@@ -22,6 +22,11 @@ body{
 	color: #5A7F7F;
 }
 
+.welcomeBlurb{
+	text-align: center;
+	font-weight: 800;
+}
+
 /*------------/welcome--------------*/
 
 /*------------signup--------------*/
@@ -68,6 +73,7 @@ nav.navbar.navbar-default{
 
 .navbar-brand{
 	font-weight: 900;
+	font-family: monospace;
 }
 
 .navbar-btn:hover{
@@ -89,6 +95,14 @@ div.container-fluid{
 #instituteFilter{
 	margin: 1.2rem;
 	color: grey;
+}
+
+#instituteFilter{
+	cursor: pointer;
+}
+
+#instituteFilter:hover{
+	color: black;
 }
 
 /*--------END viewWrapper--------------*/

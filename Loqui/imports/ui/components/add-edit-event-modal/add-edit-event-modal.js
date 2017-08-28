@@ -75,7 +75,7 @@ Template.addEditEventModal.events({
           department: template.find( '[name="department"]' ).value,
           owner: Meteor.userId(),
           description: template.find( '[name="description"]' ).value,
-          institution: Meteor.user().profile.institution,//template.find( '[name="institution"]' ).innerHTML,
+          institution: Meteor.user().profile.institution,
           location: template.find( '[name="location"]' ).value
         };
     if ( submitType === 'editEvent' ) {
